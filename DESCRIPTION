@@ -10,6 +10,7 @@ Depends:
     R (>= 3.4.3)
 Imports: 
     httr,
+    jsonlite,
     utils
 Suggests: 
     testthat,
