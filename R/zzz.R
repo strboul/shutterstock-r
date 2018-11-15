@@ -3,11 +3,11 @@
 
 .onLoad <- function(libname, pkgname) {
   op <- options()
-  op.shutterstock <- list(
-    api.root.url = "https://api.shutterstock.com/v2/"
+  op_sstk <- list(
+    sstk.api.root.url = "https://api.shutterstock.com/v2/"
   )
-  toset <- !(names(op.shutterstock) %in% names(op))
-  if(any(toset)) options(op.shutterstock[toset])
+  toset <- !(names(op_sstk) %in% names(op))
+  if(any(toset)) options(op_sstk[toset])
 
   invisible()
 }
