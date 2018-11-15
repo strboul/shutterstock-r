@@ -1,13 +1,13 @@
 
 #' Search images
 #'
-#' @param query a list.
+#' @param query character.
+#' @param sort character.
 #' @examples \dontrun{
 #' searchImages(query = "farmer")
 #' }
 #' @export
-searchImages <- function(query) {
-  url <- httr::modify_url("https://api.shutterstock.com/v2/images/search",
-                          query = list(query = query))
-  httr::GET(url)
+searchImages <- function(query, sort = "popular") {
+  parameters <- get_environment()
+  send_request("images/search", parameters)
 }
