@@ -18,16 +18,16 @@ send_request <- function(...) {
 #' Get response
 #'
 #' @param resource character. A Shutterstock API resource.
-#' @param params list. query parameters.
+#' @param parameters list. query parameters.
 #' @importFrom httr modify_url GET add_headers
 #' @noRd
-get_response <- function(resource, params) {
+get_response <- function(resource, parameters) {
   stopifnot(is.character(resource))
-  stopifnot(is.list(params))
+  stopifnot(is.list(parameters))
   auth <- sstk_oauth_token_cred()
   url <- httr::modify_url(
     paste0(getOption("sstk.api.root.url"), resource),
-    query = params
+    query = parameters
   )
   httr::GET(url, httr::add_headers(Authorization = auth))
 }
