@@ -91,6 +91,7 @@ stop_error_status <- function(response) {
 #' \code{\link[httr]{content}} call.
 #'
 #' @importFrom httr content
+#' @importFrom jsonlite fromJSON
 #' @noRd
 return_content <- function(response) {
   stopifnot(is.response(response))
