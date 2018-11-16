@@ -1,13 +1,16 @@
 
 #' Search images
 #'
-#' @param query character.
-#' @param sort character.
 #' @examples \dontrun{
-#' searchImages(query = "farmer")
+#'   today <- as.character(Sys.Date())
+#'   searchImages(query = "farmer", sort = "popular", added_date = today)
 #' }
+#' @references Shutterstock API Reference:
+#'   \url{https://api-reference.shutterstock.com/#images}
 #' @export
-searchImages <- function(query, sort = "popular") {
-  parameters <- get_environment()
-  send_request("images/search", parameters)
+searchImages <- function(...)
+{
+  params <- list(...)
+  send_request("images/search", params)
+}
 }
