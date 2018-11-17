@@ -75,9 +75,9 @@ check_http_type <- function(response, type = c("application/json")) {
   actual <- httr::http_type(response)
   if (!identical(actual, selected.type)) {
     stop(paste(
-      "'", actual, "'",
-      " response does not match with expected ",
-      "'", selected.type, "'",
+      "(Internal). Response actual content type '", actual,
+      "' does not match with the expected one ",
+      "'", selected.type, "'.",
       sep = ""
     ),
     call. = FALSE)
@@ -98,9 +98,10 @@ stop_error_status <- function(response) {
     # additional descriptions along the HTTP error status codes:
     descrp <- switch(
       as.character(httr::status_code(response)),
-      "401" = "Authenticate with sstk_auth()",
-      "403" = "May need to authenticate with sstk_auth()",
-      "404" = "That resource does not seem to exist"
+      "400" = "Be sure parameters are valid and well-formed",
+      "401" = "Please authenticate with sstk_auth()",
+      "403" = "You are not permitted for the request",
+      "404" = "The resource does not exist"
     )
     cond <- httr::http_condition(response, "error")
     stop(
