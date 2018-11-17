@@ -17,23 +17,28 @@ send_request <- function(...) {
 
 #' Get a response
 #'
+#' @param method character. A defined HTTP method.
 #' @param resource character. A Shutterstock API resource.
 #' @param parameters list. query parameters.
-#' @importFrom httr modify_url GET add_headers
+#' @importFrom httr GET POST PUT HEAD DELETE PATCH modify_url add_headers
 #' @noRd
-get_response <- function(resource, parameters) {
-  if (missing(parameters)) parameters <- NULL
+get_response <- function(method = c("GET", "POST", "PUT", "HEAD", "DELETE", "PATCH"),
+                         resource, parameters) {
+    selected.method <- match.arg(method)
+    switch (selected.method,
+            "GET" = httr::GET,
+            "POST" = httr::POST,
+            "PUT" = httr::PUT,
+            "HEAD" = httr::HEAD,
+            "DELETE" = httr::DELETE,
+            "PATCH" = httr::PATCH
+    ) -> httrMethodCall
 
-  stopifnot(is.character(resource))
-  stopifnot(is.list(parameters) || is.null(parameters))
+    if (missing(parameters)) parameters <- NULL
 
-  auth <- sstk_oauth_token_cred()
-  url <- httr::modify_url(
-    paste0(getOption("sstk.api.root.url"), resource),
-    query = parameters
-  )
+    stopifnot(is.character(resource))
+    stopifnot(is.list(parameters) || is.null(parameters))
 
-  httr::GET(url, httr::add_headers(Authorization = auth))
 }
 
 #' Check the content type of response
