@@ -39,6 +39,26 @@ get_response <- function(method = c("GET", "POST", "PUT", "HEAD", "DELETE", "PAT
     stopifnot(is.character(resource))
     stopifnot(is.list(parameters) || is.null(parameters))
 
+    # decompose list parameters for the multiple entries:
+    cond <- vapply(parameters, function(x) length(x) > 1L, logical(1))
+    if (!all(cond)) {
+      elements <- parameters[cond]
+      lapply(names(elements), function(n) {
+        el <- as.list(elements[[n]])
+        names(el) <- rep(n, length(el))
+        el
+      }) -> recycled
+      # reassign 'parameters' with the rest:
+      parameters <- c(do.call("c", recycled), parameters[!cond])
+    }
+
+    auth <- sstk_oauth_token_cred()
+    url <- httr::modify_url(
+      paste0(getOption("sstk.api.root.url"), getOption("sstk.api.version"),
+             resource
+      ),
+      query = parameters)
+    httrMethodCall(url, httr::add_headers(Authorization = auth))
 }
 
 #' Check the content type of response
