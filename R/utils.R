@@ -17,19 +17,10 @@ get_environment <- function(which = 1, exclude = NA_character_) {
   args[names(args)[!names(args) %in% exclude]]
 }
 
-#' Require call arguments
+#' Check required args for the API endpoint parameters
 #' @noRd
-require_args <- function(arg) {
-  stop(sprintf(
-    "'%s' required. Please provide missing arguments.",
-    paste(arg, collapse = ", ")
-  ),
-  call. = FALSE)
-}
-
-#' Assert type for the call arguments
-#' @noRd
-assert_type <- function(x, type = c("character", "numeric", "integer", "data.frame")) {
+check_required_args <- function(x, type = c("character", "numeric", "integer", "data.frame")) {
+  if (missing(x)) require_args_error()
   selected.type <- match.arg(type)
   switch (selected.type,
     "character" = is.character,
@@ -38,6 +29,15 @@ assert_type <- function(x, type = c("character", "numeric", "integer", "data.fra
     "data.frame" = is.data.frame
   ) -> funTypeCheck
   if (!funTypeCheck(x)) {
-    stop(paste(x, "is not", selected.type), call. = FALSE)
+    stop(paste(x, "not", selected.type), call. = FALSE)
   }
+}
+
+#' Require call arguments
+#' @noRd
+require_args_error <- function() {
+  stop(paste(
+    "Please provide required parameters."
+  ),
+  call. = FALSE)
 }
