@@ -47,7 +47,7 @@ sstk_oauth_endpoint <- function() {
 
 #' Read OAuth token from .httr-oauth file
 #'
-#' @export
+#' @noRd
 sstk_oauth_token <- function() {
   file <- ".httr-oauth"
   if (!file.exists(file)) {

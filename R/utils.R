@@ -9,18 +9,22 @@
 #' @param exclude character. which arguments should be excluded?
 #' @seealso \code{?sys.parent}
 #' @noRd
-get_environment <- function(which = 1L, exclude = NA_character_) {
-  stopifnot(is.integer(which))
+get_environment <- function(which = 1, exclude = NA_character_) {
+  stopifnot(is.numeric(which))
   stopifnot(is.character(exclude))
   e <- sys.frames()[[which]]
   args <- as.list(e, all.names = TRUE)
   args[names(args)[!names(args) %in% exclude]]
 }
 
-#' Require a call argument
+#' Require call arguments
 #' @noRd
-require_arg <- function(arg) {
-  stop(paste(arg, "is required. Please provide"), call. = FALSE)
+require_args <- function(arg) {
+  stop(sprintf(
+    "'%s' required. Please provide missing arguments.",
+    paste(arg, collapse = ", ")
+  ),
+  call. = FALSE)
 }
 
 #' Assert type for the call arguments
@@ -34,6 +38,6 @@ assert_type <- function(x, type = c("character", "numeric", "integer", "data.fra
     "data.frame" = is.data.frame
   ) -> funTypeCheck
   if (!funTypeCheck(x)) {
-    stop(paste(id, "is not", selected.type), call. = FALSE)
+    stop(paste(x, "is not", selected.type), call. = FALSE)
   }
 }
