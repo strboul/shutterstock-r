@@ -69,3 +69,50 @@ sstk_oauth_token_cred <- function() {
   cred <- token[[1]][["credentials"]]
   paste(cred[["token_type"]], cred[["access_token"]])
 }
+
+### ----------------------------------------------------------------- ###
+### ENVIRONMENT VARIABLES ----
+### ----------------------------------------------------------------- ###
+
+#' Read environment variables
+#'
+#' Reads environment variables from the \code{.Renviron} file, which is a safe
+#' place to locally store and retrieve API keys.
+#' @export
+sstk_keys <- function() {
+  list(
+    id = sstk_id(),
+    secret = sstk_secret(),
+    callback = sstk_callback()
+  )
+}
+
+sstk_id <- function() {
+  read_renvr("SSTK_ID")
+}
+
+sstk_secret <- function() {
+  read_renvr("SSTK_SECRET")
+}
+
+sstk_callback <- function() {
+  read_renvr("SSTK_CALLBACK")
+}
+
+read_renvr <- function(var) {
+  pat <- Sys.getenv(var)
+  if (identical(pat, "")) {
+    renvr_error(var)
+  }
+  pat
+}
+
+renvr_error <- function(which) {
+  stop(paste0(
+    "Set environment variable ",
+    "'", which, "'",
+    " from your Shutterstock personal access token"
+  ),
+  call. = FALSE)
+}
+
