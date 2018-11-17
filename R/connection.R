@@ -70,12 +70,12 @@ check_http_type <- function(response, type = c("application/json")) {
 stop_error_status <- function(response) {
   stopifnot(is.response(response))
   if (httr::http_error(response)) {
-    # additional descriptions by the HTTP error status codes:
+    # additional descriptions along the HTTP error status codes:
     descrp <- switch(
       as.character(httr::status_code(response)),
       "401" = "Authenticate with sstk_auth()",
-      "404" = "That resource does not seem to exist",
-      "403" = "May need to authenticate with sstk_auth()"
+      "403" = "May need to authenticate with sstk_auth()",
+      "404" = "That resource does not seem to exist"
     )
     cond <- httr::http_condition(response, "error")
     stop(
@@ -105,6 +105,7 @@ return_content <- function(response) {
 }
 
 #' Check if an object has response class
+#' @noRd
 is.response <- function(x) {
   inherits(x, "response")
 }

@@ -25,7 +25,6 @@ sstk_callback <- function() {
   read_renvr("SSTK_CALLBACK")
 }
 
-#' @references https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 read_renvr <- function(var) {
   pat <- Sys.getenv(var)
   if (identical(pat, "")) {
@@ -35,5 +34,10 @@ read_renvr <- function(var) {
 }
 
 renvr_error <- function(which) {
-  stop(paste("Please set env var", which, "to your Shutterstock personal access token"), call. = FALSE)
+  stop(paste(
+    "Please set env var",
+    which,
+    "to your Shutterstock personal access token"
+  ),
+  call. = FALSE)
 }

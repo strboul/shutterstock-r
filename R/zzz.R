@@ -4,7 +4,7 @@
 .onLoad <- function(libname, pkgname) {
   op <- options()
   op_sstk <- list(
-    sstk.api.root.url = "https://api.shutterstock.com/v2/"
+    sstk.api.root.url = "https://api.shutterstock.com/"
   )
   toset <- !(names(op_sstk) %in% names(op))
   if(any(toset)) options(op_sstk[toset])
