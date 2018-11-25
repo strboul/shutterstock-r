@@ -49,8 +49,9 @@ SHUTTERSTOCK_CLIENT_SECRET="<enter-your-client-secret>"
 SHUTTERSTOCK_CALLBACK_URL="<enter-your-callback-url>"
 ```
 
-Check `sstk_keys()` to see if the variables are properly set up. Please read
-the [OAuth 2.0 guide](https://developers.shutterstock.com/oauth-20) throughly.
+Don't forget to restart your environment. Check `sstk_keys()` to see if the
+variables are properly set up. Please read the 
+[OAuth 2.0 guide](https://developers.shutterstock.com/oauth-20) throughly.
 
 ## Examples
 

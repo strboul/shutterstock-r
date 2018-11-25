@@ -41,7 +41,7 @@ get_response <- function(method = c("GET", "POST", "PUT", "HEAD", "DELETE", "PAT
 
     # decompose list parameters for the multiple entries:
     cond <- vapply(parameters, function(x) length(x) > 1L, logical(1))
-    if (!all(cond)) {
+    if (all(cond)) {
       elements <- parameters[cond]
       lapply(names(elements), function(n) {
         el <- as.list(elements[[n]])
@@ -101,7 +101,8 @@ stop_error_status <- function(response) {
       "400" = "Be sure parameters are valid and well-formed",
       "401" = "Please authenticate with sstk_auth()",
       "403" = "You are not permitted for the request",
-      "404" = "The resource does not exist"
+      "404" = "The resource does not exist",
+      "429" = "The rate limit is exceeded"
     )
     cond <- httr::http_condition(response, "error")
     stop(
