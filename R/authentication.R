@@ -40,8 +40,16 @@ sstk_auth <- function() {
 #' @noRd
 sstk_oauth_endpoint <- function() {
   httr::oauth_endpoint(
-    "authorize" = paste0(getOption("sstk.api.root.url"), "oauth/authorize"),
-    "access" = paste0(getOption("sstk.api.root.url"), "oauth/access_token")
+    "authorize" = paste0(
+      getOption("sstk.api.root.url"),
+      getOption("sstk.api.version"),
+      "oauth/authorize"
+    ),
+    "access" = paste0(
+      getOption("sstk.api.root.url"),
+      getOption("sstk.api.version"),
+      "oauth/access_token"
+    )
   )
 }
 
