@@ -19,27 +19,18 @@ send_request <- function(...) {
 #'
 #' @param method character. A defined HTTP method.
 #' @param resource character. A Shutterstock API resource.
-#' @param parameters list. query parameters.
-#' @importFrom httr GET POST PUT HEAD DELETE PATCH modify_url add_headers
+#' @param parameters query parameters.
+#' @param body data list elements for the POST requests.
+#' @importFrom httr GET POST DELETE modify_url add_headers
 #' @noRd
-get_response <- function(method = c("GET", "POST", "PUT", "HEAD", "DELETE", "PATCH"),
-                         resource, parameters) {
-    selected.method <- match.arg(method)
-    switch (selected.method,
-            "GET" = httr::GET,
-            "POST" = httr::POST,
-            "PUT" = httr::PUT,
-            "HEAD" = httr::HEAD,
-            "DELETE" = httr::DELETE,
-            "PATCH" = httr::PATCH
-    ) -> httrMethodCall
+get_response <- function(method = c("GET", "POST", "DELETE"),
+                         resource, parameters = NULL, body = NULL, encode = NULL) {
 
-    if (missing(parameters)) parameters <- NULL
+  selected.method <- tryCatch(match.arg(method),
+                              error = function(e) method)
 
-    stopifnot(is.character(resource))
-    stopifnot(is.list(parameters) || is.null(parameters))
-
-    # decompose list parameters for the multiple entries:
+  # decompose list parameters for the multiple entries:
+  if (!is.null(parameters)) {
     cond <- vapply(parameters, function(x) length(x) > 1L, logical(1))
     if (all(cond)) {
       elements <- parameters[cond]
@@ -51,14 +42,27 @@ get_response <- function(method = c("GET", "POST", "PUT", "HEAD", "DELETE", "PAT
       # reassign 'parameters' with the rest:
       parameters <- c(do.call("c", recycled), parameters[!cond])
     }
+  }
 
-    auth <- sstk_oauth_token_cred()
-    url <- httr::modify_url(
-      paste0(getOption("sstk.api.root.url"), getOption("sstk.api.version"),
-             resource
-      ),
-      query = parameters)
-    httrMethodCall(url, httr::add_headers(Authorization = auth))
+  auth <- sstk_oauth_token_cred()
+  url <- httr::modify_url(
+    paste0(getOption("sstk.api.root.url"), getOption("sstk.api.version"),
+           resource
+    ),
+    query = parameters)
+
+  if (identical(selected.method, "GET")) {
+    httr::GET(url, httr::add_headers(Authorization = auth))
+  } else if (identical(selected.method, "POST")) {
+    httr::POST(url, httr::add_headers(Authorization = auth), body = body, encode = encode)
+  } else if (identical(selected.method, "DELETE")) {
+    httr::DELETE(url, httr::add_headers(Authorization = auth))
+  } else {
+    stop(paste(
+      "(Internal). method has not been implemented:", selected.method
+    ),
+    call. = FALSE)
+  }
 }
 
 #' Check the content type of response
@@ -75,7 +79,7 @@ check_http_type <- function(response, type = c("application/json")) {
   actual <- httr::http_type(response)
   if (!identical(actual, selected.type)) {
     stop(paste(
-      "(Internal). Response actual content type '", actual,
+      "(Internal). response's actual content type '", actual,
       "' does not match with the expected one ",
       "'", selected.type, "'.",
       sep = ""
