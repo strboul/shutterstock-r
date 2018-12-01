@@ -16,9 +16,10 @@
 #' @export
 searchImages <- function(...) {
   params <- list(...)
-  send_request(method = "GET",
-               resource = "images/search",
-               parameters = params
+  send_request(
+    method = "GET",
+    resource = "images/search",
+    parameters = params
   )
 }
 
@@ -33,8 +34,9 @@ searchImages <- function(...) {
 #' }
 #' @export
 listImageCategories <- function() {
-  send_request(method = "GET",
-               resource = "images/categories"
+  send_request(
+    method = "GET",
+    resource = "images/categories"
   )
 }
 
@@ -45,15 +47,16 @@ listImageCategories <- function() {
 #' @param id character. Image ID. (required)
 #' @source \code{\dQuote{images/\{id\}/similar}}
 #' @examples \dontrun{
-#' listSimilarImages(id = "465011609")
+#' listSimilarImages(id = "620154782")
 #' }
 #' @export
 listSimilarImages <- function(id, ...) {
   check_required_args(id, "character")
   params <- list(...)
-  send_request(method = "GET",
-               resource = sprintf("images/%s/similar", id),
-               parameters = params
+  send_request(
+    method = "GET",
+    resource = sprintf("images/%s/similar", id),
+    parameters = params
   )
 }
 
@@ -65,16 +68,17 @@ listSimilarImages <- function(id, ...) {
 #' @param id character. One or more Image IDs.
 #' @source \code{\dQuote{images/recommendations}}
 #' @examples \dontrun{
-#' listRecommendedImages(id = "465011609")
-#' listRecommendedImages(id = c("465011609", "416256163"), max_items = 5)
+#' listRecommendedImages(id = "620154782")
+#' listRecommendedImages(id = c("620154782", "620154770"), max_items = 5)
 #' }
 #' @export
 listRecommendedImages <- function(id, ...) {
   check_required_args(id, "character")
   params <- list("id" = id, ...)
-  send_request(method = "GET",
-               resource = "images/recommendations",
-               parameters = params
+  send_request(
+    method = "GET",
+    resource = "images/recommendations",
+    parameters = params
   )
 }
 
@@ -90,15 +94,16 @@ listRecommendedImages <- function(id, ...) {
 #' @param id character. Image ID. (required)
 #' @source \code{\dQuote{images/\{id\}}}
 #' @examples \dontrun{
-#' getImageDetails(id = "465011609")
+#' getImageDetails(id = "620154782")
 #' }
 #' @export
 getImageDetails <- function(id, ...) {
   check_required_args(id, "character")
   params <- list(...)
-  send_request(method = "GET",
-               resource = sprintf("images/%s", id),
-               parameters = params
+  send_request(
+    method = "GET",
+    resource = sprintf("images/%s", id),
+    parameters = params
   )
 }
 
@@ -109,17 +114,22 @@ getImageDetails <- function(id, ...) {
 #' @param id character. One or more Image IDs.
 #' @source \code{\dQuote{v2/images/}}
 #' @examples \dontrun{
-#' listImages(id = c("1110335168", "465011609"), view = "minimal")
+#' listImages(id = c("620154782", "620154770"), view = "minimal")
 #' }
 #' @export
 listImages <- function(id, ...) {
   check_required_args(id, "character")
   params <- list("id" = id, ...)
-  send_request(method = "GET",
-               resource = "images",
-               parameters = params
+  send_request(
+    method = "GET",
+    resource = "images",
+    parameters = params
   )
 }
+
+### ----------------------------------------------------------------- ###
+### LICENSES AND DOWNLOADS ----
+### ----------------------------------------------------------------- ###
 
 #' License images
 #'
@@ -130,9 +140,6 @@ listImages <- function(id, ...) {
 #' "small", search_id = "Books")
 #' }
 #' @export
-licenseImages <- function(...) {
-  params <- list(...)
-  send_request(method = "POST",
                resource = "images/licenses",
                parameters = params
   )
@@ -148,9 +155,28 @@ licenseImages <- function(...) {
 #' @export
 listLicenses <- function(...) {
   params <- list(...)
-  send_request(method = "GET",
                resource = "images/licenses",
                parameters = params
+  send_request(
+    method = "GET",
   )
 }
 
+### ----------------------------------------------------------------- ###
+### COLLECTIONS ----
+### ----------------------------------------------------------------- ###
+#' List image collections
+#'
+#' @examples \dontrun{
+#' listImageCollections()
+#' }
+#' @export
+listImageCollections <- function(...) {
+  params <- list(...)
+  send_request(
+    method = "GET",
+    resource = "images/collections",
+    parameters = params,
+    scope = "collections.view"
+  )
+}
