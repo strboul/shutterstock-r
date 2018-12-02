@@ -1,3 +1,4 @@
+^Makefile$
 ^\.lintr$
 ^\.covrignore$
 ^.*\.Rproj$
