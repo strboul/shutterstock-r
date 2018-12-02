@@ -58,10 +58,11 @@ get_response <- function(method = c("GET", "POST", "DELETE"),
   } else if (identical(selected.method, "DELETE")) {
     httr::DELETE(url, httr::add_headers(Authorization = auth))
   } else {
-    stop(paste(
-      "(Internal). method has not been implemented:", selected.method
-    ),
-    call. = FALSE)
+    stop(
+      paste(
+        "(Internal). method has not been implemented:", selected.method
+      ),
+      call. = FALSE)
   }
 }
 
@@ -78,13 +79,14 @@ check_http_type <- function(response, type = c("application/json")) {
   selected.type <- match.arg(type)
   actual <- httr::http_type(response)
   if (!identical(actual, selected.type)) {
-    stop(paste(
-      "(Internal). response's actual content type '", actual,
-      "' does not match with the expected one ",
-      "'", selected.type, "'.",
-      sep = ""
-    ),
-    call. = FALSE)
+    stop(
+      paste(
+        "(Internal). response's actual content type '", actual,
+        "' does not match with the expected one ",
+        "'", selected.type, "'.",
+        sep = ""
+      ),
+      call. = FALSE)
   }
 }
 

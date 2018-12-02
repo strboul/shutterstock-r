@@ -103,8 +103,18 @@ sstk_secret <- function() {
   read_renvr("SSTK_SECRET")
 }
 
+#' OAuth callback URL
+#'
+#' Since the package is dependent on the \code{httr} package, some options has
+#' to be altered accordingly.
+#' @importFrom httr parse_url
+#' @noRd
 sstk_callback <- function() {
-  read_renvr("SSTK_CALLBACK")
+  url <- read_renvr("SSTK_CALLBACK")
+  p <- httr::parse_url(url)
+  Sys.setenv("HTTR_PORT" = p[["hostname"]])
+  Sys.setenv("HTTR_SERVER_PORT" = p[["port"]])
+  url
 }
 
 read_renvr <- function(var) {
@@ -123,4 +133,3 @@ renvr_error <- function(which) {
   ),
   call. = FALSE)
 }
-

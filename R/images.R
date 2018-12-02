@@ -10,6 +10,8 @@
 #' @param ... arguments to be passed by the parameters in the source endpoint.
 #' @source \code{\dQuote{images/search}}
 #' @examples \dontrun{
+#' searchImages(query = "paris")
+#'
 #' today <- as.character(Sys.Date())
 #' searchImages(query = "farmer", sort = "popular", added_date = today)
 #' }
@@ -131,20 +133,6 @@ listImages <- function(id, ...) {
 ### LICENSES AND DOWNLOADS ----
 ### ----------------------------------------------------------------- ###
 
-#' License images
-#'
-#' Getting licenses for one or more images.
-#'
-#' @examples \dontrun{
-#' licenseImages(subscription_id = "<SUBSCRIPTION_ID>", format = "jpg", size =
-#' "small", search_id = "Books")
-#' }
-#' @export
-               resource = "images/licenses",
-               parameters = params
-  )
-}
-
 #' List licenses
 #'
 #' Listing existing licenses.
@@ -155,10 +143,10 @@ listImages <- function(id, ...) {
 #' @export
 listLicenses <- function(...) {
   params <- list(...)
-               resource = "images/licenses",
-               parameters = params
   send_request(
     method = "GET",
+    resource = "images/licenses",
+    parameters = params
   )
 }
 
