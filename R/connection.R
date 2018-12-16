@@ -36,11 +36,11 @@ get_response <- function(method = c("GET", "POST", "DELETE"),
     cond <- vapply(parameters, function(x) length(x) > 1L, logical(1))
     if (all(cond)) {
       elements <- parameters[cond]
-      lapply(names(elements), function(n) {
+      recycled <- lapply(names(elements), function(n) {
         el <- as.list(elements[[n]])
         names(el) <- rep(n, length(el))
         el
-      }) -> recycled
+      })
       # reassign 'parameters' with the rest:
       parameters <- c(do.call("c", recycled), parameters[!cond])
     }

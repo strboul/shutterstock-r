@@ -1,2 +1,5 @@
 linters: with_defaults(line_length_linter(100),
-                       camel_case_linter = NULL)
+                       camel_case_linter = NULL,
+		       commented_code_linter = NULL)
+# don't lint files in api test folder (those created by httptest pkg):
+exclusions: c(file.path("tests/testthat/api.shutterstock.com", list.files("tests/testthat/api.shutterstock.com", recursive = TRUE)))

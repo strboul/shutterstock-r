@@ -1,7 +1,7 @@
 
 # global variables for the package: http://r-pkgs.had.co.nz/r.html
 
-.onLoad <- function(libname, pkgname) {
+.onLoad <- function(libname, pkgname) { # nocov start # nolint start
   op <- options()
   op_sstk <- list(
     sstk.api.root.url = "https://api.shutterstock.com/",
@@ -11,4 +11,4 @@
   if(any(toset)) options(op_sstk[toset])
 
   invisible()
-}
+} # nocov end # nolint end
