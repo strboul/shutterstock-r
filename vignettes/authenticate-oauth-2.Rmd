@@ -1,6 +1,5 @@
 ---
 title: "Authenticate with OAuth 2.0"
-author: "Metin Yazici"
 date: "2018-12-16"
 output: rmarkdown::html_vignette
 vignette: >
