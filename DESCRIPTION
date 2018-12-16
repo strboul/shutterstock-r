@@ -14,7 +14,8 @@ Imports:
     utils
 Suggests: 
     testthat,
-    httptest
+    httptest,
+    covr
 LazyData: true
 Encoding: UTF-8
 RoxygenNote: 6.1.1

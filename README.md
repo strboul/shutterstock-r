@@ -3,20 +3,24 @@
 shutterstock
 ============
 
-[![CRAN status badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock) [![Travis build status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r)
+[![Travis build status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r) [![CRAN status badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock) [![Coverage status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 
 R library for Shutterstock REST API
 
 Installation
 ------------
 
-You can install the released version of shutterstock from [CRAN](https://CRAN.R-project.org) with:
-
+<!--You can install the released version of shutterstock from
+[CRAN](https://CRAN.R-project.org) with:
 ``` r
 install.packages("shutterstock")
-```
+```-->
+You can install development version:
 
-You can also install development version by `devtools::install_github("strboul/shutterstock")`.
+``` r
+# install.packages("devtools")
+devtools::install_github("strboul/shutterstock")
+```
 
 Authenticate with OAuth 2.0
 ---------------------------
@@ -78,8 +82,3 @@ Development
 Only `GET` methods are supported in the current version.
 
 Please note that the 'shutterstock' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
-
-License
--------
-
-MIT
