@@ -3,4 +3,7 @@ pkgdown: 1.3.0
 pkgdown_sha: ~
 articles:
   authenticate-oauth-2: authenticate-oauth-2.html
+urls:
+  reference: https://strboul.github.io/rlib/shutterstock/reference
+  article: https://strboul.github.io/rlib/shutterstock/articles
 
