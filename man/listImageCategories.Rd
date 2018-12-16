@@ -4,7 +4,7 @@
 \alias{listImageCategories}
 \title{List image categories}
 \source{
-\code{\dQuote{images/categories}}
+\dQuote{\code{/images/categories}}
 }
 \usage{
 listImageCategories()

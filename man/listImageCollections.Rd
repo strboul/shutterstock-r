@@ -3,8 +3,14 @@
 \name{listImageCollections}
 \alias{listImageCollections}
 \title{List image collections}
+\source{
+\dQuote{\code{/images/collections/}}
+}
 \usage{
 listImageCollections(...)
+}
+\arguments{
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 List image collections

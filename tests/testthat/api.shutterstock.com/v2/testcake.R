@@ -1,0 +1,25 @@
+structure(list(url = "https://api.shutterstock.com/v2/testcake", 
+    status_code = 404L, headers = structure(list(date = "Tue, 11 Dec 2018 22:25:33 GMT", 
+        `content-type` = "application/json; charset=utf8", `content-length` = "41", 
+        connection = "keep-alive", `cache-control` = "no-cache", 
+        `x-request-id` = "357195cb-d952-472c-856f-25e40e754b9e"), .Names = c("date", 
+    "content-type", "content-length", "connection", "cache-control", 
+    "x-request-id"), class = c("insensitive", "list")), all_headers = list(
+        structure(list(status = 404L, version = "HTTP/1.1", headers = structure(list(
+            date = "Tue, 11 Dec 2018 22:25:33 GMT", `content-type` = "application/json; charset=utf8", 
+            `content-length` = "41", connection = "keep-alive", 
+            `cache-control` = "no-cache", `x-request-id` = "357195cb-d952-472c-856f-25e40e754b9e"), .Names = c("date", 
+        "content-type", "content-length", "connection", "cache-control", 
+        "x-request-id"), class = c("insensitive", "list"))), .Names = c("status", 
+        "version", "headers"))), cookies = structure(list(domain = logical(0), 
+        flag = logical(0), path = logical(0), secure = logical(0), 
+        expiration = structure(numeric(0), class = c("POSIXct", 
+        "POSIXt")), name = logical(0), value = logical(0)), .Names = c("domain", 
+    "flag", "path", "secure", "expiration", "name", "value"), row.names = integer(0), class = "data.frame"), 
+    content = charToRaw("{\"message\":\"Not Found\",\"code\":\"INTERNAL\"}"), 
+    date = structure(1544567133, class = c("POSIXct", "POSIXt"
+    ), tzone = "GMT"), times = structure(c(0, 3.5e-05, 3.7e-05, 
+    0.000172, 0.132246, 0.132307), .Names = c("redirect", "namelookup", 
+    "connect", "pretransfer", "starttransfer", "total"))), .Names = c("url", 
+"status_code", "headers", "all_headers", "cookies", "content", 
+"date", "times"), class = "response")

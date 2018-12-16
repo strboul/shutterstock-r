@@ -4,13 +4,15 @@
 \alias{listImages}
 \title{List images}
 \source{
-\code{\dQuote{v2/images/}}
+\dQuote{\code{/images/}}
 }
 \usage{
 listImages(id, ...)
 }
 \arguments{
 \item{id}{character. One or more Image IDs.}
+
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Listing information about one or more images, including the available sizes.

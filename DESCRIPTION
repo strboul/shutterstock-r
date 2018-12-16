@@ -13,7 +13,8 @@ Imports:
     jsonlite,
     utils
 Suggests: 
-    testthat
+    testthat,
+    httptest
 LazyData: true
 Encoding: UTF-8
 RoxygenNote: 6.1.1

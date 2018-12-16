@@ -7,8 +7,8 @@
 #'
 #' Searching for images.
 #'
-#' @param ... arguments to be passed by the parameters in the source endpoint.
-#' @source \code{\dQuote{images/search}}
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/search}}
 #' @examples \dontrun{
 #' searchImages(query = "paris")
 #'
@@ -30,7 +30,7 @@ searchImages <- function(...) {
 #' Listing the categories (Shutterstock-assigned genres) that images can belong
 #' to. \emph{This call takes no additional parameters.}
 #'
-#' @source \code{\dQuote{images/categories}}
+#' @source \dQuote{\code{/images/categories}}
 #' @examples \dontrun{
 #' listImageCategories()
 #' }
@@ -47,7 +47,8 @@ listImageCategories <- function() {
 #' Returning images that are visually similar to an image that you specify.
 #'
 #' @param id character. Image ID. (required)
-#' @source \code{\dQuote{images/\{id\}/similar}}
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/\{id\}/similar}}
 #' @examples \dontrun{
 #' listSimilarImages(id = "620154782")
 #' }
@@ -68,7 +69,8 @@ listSimilarImages <- function(id, ...) {
 #' image IDs.
 #'
 #' @param id character. One or more Image IDs.
-#' @source \code{\dQuote{images/recommendations}}
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/recommendations}}
 #' @examples \dontrun{
 #' listRecommendedImages(id = "620154782")
 #' listRecommendedImages(id = c("620154782", "620154770"), max_items = 5)
@@ -94,7 +96,8 @@ listRecommendedImages <- function(id, ...) {
 #' the sizes that it is available in.
 #'
 #' @param id character. Image ID. (required)
-#' @source \code{\dQuote{images/\{id\}}}
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/\{id\}}}
 #' @examples \dontrun{
 #' getImageDetails(id = "620154782")
 #' }
@@ -114,7 +117,8 @@ getImageDetails <- function(id, ...) {
 #' Listing information about one or more images, including the available sizes.
 #'
 #' @param id character. One or more Image IDs.
-#' @source \code{\dQuote{v2/images/}}
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/}}
 #' @examples \dontrun{
 #' listImages(id = c("620154782", "620154770"), view = "minimal")
 #' }
@@ -137,6 +141,8 @@ listImages <- function(id, ...) {
 #'
 #' Listing existing licenses.
 #'
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/licenses/}}
 #' @examples \dontrun{
 #' listLicenses(image_id = "620154782")
 #' }
@@ -153,8 +159,11 @@ listLicenses <- function(...) {
 ### ----------------------------------------------------------------- ###
 ### COLLECTIONS ----
 ### ----------------------------------------------------------------- ###
+
 #' List image collections
 #'
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/collections/}}
 #' @examples \dontrun{
 #' listImageCollections()
 #' }
@@ -164,7 +173,64 @@ listImageCollections <- function(...) {
   send_request(
     method = "GET",
     resource = "images/collections",
-    parameters = params,
-    scope = "collections.view"
+    parameters = params
+  )
+}
+
+#' Get the details of image collections
+#'
+#' @param id character. Collection ID. (required)
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/collections/\{id\}}}
+#' @examples \dontrun{
+#' # enter an id from the collections you own:
+#' getImageCollections(id = "139149928")
+#' }
+#' @export
+getImageCollections <- function(id, ...) {
+  check_required_args(id, "character")
+  params <- list(...)
+  send_request(
+    method = "GET",
+    resource = sprintf("images/collections/%s", id),
+    parameters = params
+  )
+}
+
+#' Get the contents of image collections
+#'
+#' @param id character. Collection ID. (required)
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/collections/\{id\}/items}}
+#' @examples \dontrun{
+#' # enter an id from the collections you own:
+#' getImageCollectionsContent(id = "139149928")
+#' }
+#' @export
+getImageCollectionsContent <- function(id, ...) {
+  check_required_args(id, "character")
+  params <- list(...)
+  send_request(
+    method = "GET",
+    resource = sprintf("images/collections/%s/items", id),
+    parameters = params
+  )
+}
+
+#' List featured collections
+#'
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/collections/featured/}}
+#' @examples \dontrun{
+#' listFeaturedCollections()
+#' listFeaturedCollections(type = "photo")
+#' }
+#' @export
+listFeaturedCollections <- function(...) {
+  params <- list(...)
+  send_request(
+    method = "GET",
+    resource = "images/collections/featured",
+    parameters = params
   )
 }

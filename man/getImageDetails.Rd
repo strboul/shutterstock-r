@@ -4,13 +4,15 @@
 \alias{getImageDetails}
 \title{Get details about images}
 \source{
-\code{\dQuote{images/\{id\}}}
+\dQuote{\code{/images/\{id\}}}
 }
 \usage{
 getImageDetails(id, ...)
 }
 \arguments{
 \item{id}{character. Image ID. (required)}
+
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Showing information about an image, including a URL to a preview image and

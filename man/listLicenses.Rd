@@ -3,8 +3,14 @@
 \name{listLicenses}
 \alias{listLicenses}
 \title{List licenses}
+\source{
+\dQuote{\code{/images/licenses/}}
+}
 \usage{
 listLicenses(...)
+}
+\arguments{
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Listing existing licenses.

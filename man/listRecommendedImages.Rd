@@ -4,13 +4,15 @@
 \alias{listRecommendedImages}
 \title{List recommended images}
 \source{
-\code{\dQuote{images/recommendations}}
+\dQuote{\code{/images/recommendations}}
 }
 \usage{
 listRecommendedImages(id, ...)
 }
 \arguments{
 \item{id}{character. One or more Image IDs.}
+
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Returning images that customers put in the same collection as the specified

@@ -4,13 +4,13 @@
 \alias{searchImages}
 \title{Search images}
 \source{
-\code{\dQuote{images/search}}
+\dQuote{\code{/images/search}}
 }
 \usage{
 searchImages(...)
 }
 \arguments{
-\item{...}{arguments to be passed by the parameters in the source endpoint.}
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Searching for images.

@@ -4,13 +4,15 @@
 \alias{listSimilarImages}
 \title{List similar images}
 \source{
-\code{\dQuote{images/\{id\}/similar}}
+\dQuote{\code{/images/\{id\}/similar}}
 }
 \usage{
 listSimilarImages(id, ...)
 }
 \arguments{
 \item{id}{character. Image ID. (required)}
+
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Returning images that are visually similar to an image that you specify.
