@@ -9,7 +9,7 @@ r:
 r_packages:
   - covr
   - lintr
-after_script:
-  - Rscript -e 'lintr::lint_package()'
 after_success:
+  - R CMD INSTALL $PKG_TARBALL
+  - Rscript -e 'lintr::lint_package()'
   - Rscript -e 'covr::codecov()'
