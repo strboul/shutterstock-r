@@ -8,6 +8,11 @@ with_mock_api({
   })
 })
 
+test_that("can get a response", {
+  # expect an internal error for non implemented methods e.g. PATCH
+  expect_error(get_response("PATCH", "test"))
+})
+
 with_mock_api({
   test_that("stop error status", {
     clear_response <- httr::GET("https://api.shutterstock.com/v2/test")
@@ -38,5 +43,5 @@ test_that("sstk oauth scope validation", {
     c("collections.edit", "collections.view")
   )
 
-  expect_error(sstk_oauth_scopes(c("collections.edit", "XYZ-NONEXISTS")))
+  expect_error(sstk_oauth_scope(c("collections.edit", "XYZ-NONEXISTS")))
 })

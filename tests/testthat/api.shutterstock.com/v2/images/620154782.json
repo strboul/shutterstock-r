@@ -1,0 +1,136 @@
+{
+    "id": "620154782",
+    "added_date": "2017-04-12",
+    "aspect": 1.5,
+    "assets": {
+        "medium_jpg": {
+            "display_name": "Med",
+            "dpi": 300,
+            "file_size": 824320,
+            "format": "jpg",
+            "height": 667,
+            "is_licensable": true,
+            "width": 1000
+        },
+        "huge_tiff": {
+            "display_name": "Huge",
+            "dpi": 300,
+            "file_size": 72000000,
+            "format": "tiff",
+            "height": 4000,
+            "is_licensable": false,
+            "width": 6000
+        },
+        "small_jpg": {
+            "display_name": "Small",
+            "dpi": 300,
+            "file_size": 229376,
+            "format": "jpg",
+            "height": 334,
+            "is_licensable": true,
+            "width": 500
+        },
+        "huge_jpg": {
+            "display_name": "Huge",
+            "dpi": 300,
+            "file_size": 4639744,
+            "format": "jpg",
+            "height": 4000,
+            "is_licensable": true,
+            "width": 6000
+        },
+        "preview": {
+            "height": 300,
+            "url": "https://image.shutterstock.com/display_pic_with_logo/4178674/620154782/stock-photo-woman-bikes-along-windmill-620154782.jpg",
+            "width": 450
+        },
+        "small_thumb": {
+            "height": 67,
+            "url": "https://thumb9.shutterstock.com/thumb_small/4178674/620154782/stock-photo-woman-bikes-along-windmill-620154782.jpg",
+            "width": 100
+        },
+        "large_thumb": {
+            "height": 100,
+            "url": "https://thumb9.shutterstock.com/thumb_large/4178674/620154782/stock-photo-woman-bikes-along-windmill-620154782.jpg",
+            "width": 150
+        },
+        "huge_thumb": {
+            "height": 260,
+            "url": "https://image.shutterstock.com/image-photo/woman-bikes-along-windmill-260nw-620154782.jpg",
+            "width": 390
+        }
+    },
+    "categories": [
+        {
+            "id": "13",
+            "name": "People"
+        },
+        {
+            "id": "20",
+            "name": "NOT-CATEGORIZED"
+        }
+    ],
+    "contributor": {
+        "id": "4178674"
+    },
+    "description": "Woman bikes along windmill",
+    "image_type": "photo",
+    "is_adult": false,
+    "is_illustration": false,
+    "has_model_release": true,
+    "keywords": [
+        "rotterdam",
+        "bicycle",
+        "kinderdijk",
+        "cycling",
+        "ride",
+        "summer",
+        "bike",
+        "scene",
+        "agriculture",
+        "dutch",
+        "spring",
+        "beautiful",
+        "grass",
+        "europe",
+        "sheep",
+        "architecture",
+        "sky",
+        "green",
+        "natural",
+        "nature",
+        "countryside",
+        "holland",
+        "amsterdam",
+        "windmill",
+        "netherlands",
+        "active",
+        "biking",
+        "people",
+        "water",
+        "flower",
+        "outdoor",
+        "environment",
+        "traditional",
+        "blue",
+        "field",
+        "activities",
+        "outside",
+        "river",
+        "travel",
+        "colorful",
+        "landscape"
+    ],
+    "media_type": "image",
+    "model_releases": [
+        {
+            "id": "21917942"
+        }
+    ],
+    "models": [
+        {
+            "id": "21917942"
+        }
+    ],
+    "original_filename": "DSC04654.jpg"
+}

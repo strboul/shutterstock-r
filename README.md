@@ -5,7 +5,7 @@ shutterstock
 
 [![Travis build status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r) [![Coverage status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master) [![CRAN status badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock)
 
-R library for Shutterstock REST API
+R library for Shutterstock REST API. Please refer to the official reference [here](https://api-reference.shutterstock.com/).
 
 Installation
 ------------
@@ -71,7 +71,27 @@ do.call(rbind, lapply(seq_along(d), function(x) {
   )
 })) -> top
 head(top)
-#> NULL
+#>           id
+#> 1 1261728715
+#> 2 1261806031
+#> 3 1262231293
+#> 4 1261941877
+#> 5 1261941880
+#> 6 1261941883
+#>                                                        description
+#> 1                                   Amsterdam Centraal Footage ...
+#> 2                                      amsterdam canals colors ...
+#> 3 Netherlands Flag Collection. Flat flags vector illustration. ...
+#> 4   Colorful field of tulips, Beautiful tulips in the garden.  ...
+#> 5   Colorful field of tulips, Beautiful tulips in the garden.  ...
+#> 6   Colorful field of tulips, Beautiful tulips in the garden.  ...
+#>                                                                                                                                                         preview
+#> 1                               https://image.shutterstock.com/display_pic_with_logo/191267990/1261728715/stock-photo-amsterdam-centraal-footage-1261728715.jpg
+#> 2                                  https://image.shutterstock.com/display_pic_with_logo/221818057/1261806031/stock-photo-amsterdam-canals-colors-1261806031.jpg
+#> 3 https://image.shutterstock.com/display_pic_with_logo/840328/1262231293/stock-vector-netherlands-flag-collection-flat-flags-vector-illustration-1262231293.jpg
+#> 4  https://image.shutterstock.com/display_pic_with_logo/197154100/1261941877/stock-photo-colorful-field-of-tulips-beautiful-tulips-in-the-garden-1261941877.jpg
+#> 5  https://image.shutterstock.com/display_pic_with_logo/197154100/1261941880/stock-photo-colorful-field-of-tulips-beautiful-tulips-in-the-garden-1261941880.jpg
+#> 6  https://image.shutterstock.com/display_pic_with_logo/197154100/1261941883/stock-photo-colorful-field-of-tulips-beautiful-tulips-in-the-garden-1261941883.jpg
 ```
 
 ( a data can be plotted..)

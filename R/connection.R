@@ -34,7 +34,7 @@ get_response <- function(method = c("GET", "POST", "DELETE"),
   # decompose list parameters for the multiple entries:
   if (!is.null(parameters)) {
     cond <- vapply(parameters, function(x) length(x) > 1L, logical(1))
-    if (all(cond)) {
+    if (!all(cond)) {
       elements <- parameters[cond]
       recycled <- lapply(names(elements), function(n) {
         el <- as.list(elements[[n]])
