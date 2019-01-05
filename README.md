@@ -28,66 +28,9 @@ You can install development version:
 devtools::install_github("strboul/shutterstock")
 ```
 
-## Authenticate with OAuth 2.0
-
-OAuth 2.0 authentication is better to use for the queries as its scope
-is greater than the capabilities of the basic authentication.
-
-After registering into the developer’s app, you will receive a client id
-and secret. During the registration, the app requires the callback URL
-and hostname to be explicitly defined. For instance, if you set your
-Callback URL as `http://localhost:3000` then the hostname should be set
-as `localhost`.
-
-A general use of `.Renviron` is to store API keys. Create an `.Renviron`
-file and add the following variables in that form (be sure the values
-are in quotes):
-
-    SHUTTERSTOCK_CLIENT_ID="<enter-your-client-key>"
-    SHUTTERSTOCK_CLIENT_SECRET="<enter-your-client-secret>"
-    SHUTTERSTOCK_CALLBACK_URL="<enter-your-callback-url>"
-
-Don’t forget to restart your R session to have changes applied.
-
-If you do not want to keep an `.Renviron` file in your directory, you
-can set environment variables which are persistent during a single R
-session:
-
-``` r
-sstk_set_keys <- function(
-  id = "<enter-your-client-key>",
-  secret = "<enter-your-client-secret>",
-  callback = "<enter-your-callback-url>"
-)
-```
-
-After proceeding in any approach depicted above, it is better to check
-`sstk_get_keys()` to see if the variables are properly set up. In the
-end, you are ready to authenticate with:
-
-``` r
-library("shutterstock")
-sstk_auth()
-```
-
-After the authentication process has been successfully completed, a
-token file named `.httr-oauth` will be written to your working
-directory. Do not share this token with others.
-
-Since some API endpoints require an access token for different scopes or
-permissions, scopes can be added to the call such as `sstk_auth(scopes =
-c("collections.view", "licenses.view"))`. You can see which scopes do
-you need by looking an individual endpoint reference. If you want to
-change the scope of your token, delete the existing `.httr-oauth` file,
-re-authenticate again with `sstk_auth` by providing required scopes.
-
-For general OAuth problems, please read the [Shutterstock OAuth 2.0
-guide](https://api-reference.shutterstock.com/#authentication-oauth-authentication-h2)
-thoroughly.
-
 ## Usage
 
-Search top *Amsterdam* images added today:
+Search the most popular images about *Amsterdam* added today:
 
 ``` r
 today <- as.character(Sys.Date())
@@ -105,6 +48,15 @@ do.call(rbind, lapply(seq_along(d), function(x) {
 })) -> top
 head(top)
 ```
+
+## OAuth 2.0 Authentication
+
+OAuth 2.0 authentication is better to use for the queries as its scope
+is greater than the capabilities of the basic authentication. Read the
+vignette for more information. For general OAuth problems, please read
+the [Shutterstock OAuth 2.0
+guide](https://api-reference.shutterstock.com/#authentication-oauth-authentication-h2)
+thoroughly.
 
 ## Development
 
