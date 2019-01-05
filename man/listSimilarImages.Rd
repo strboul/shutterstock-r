@@ -15,7 +15,7 @@ listSimilarImages(id, ...)
 \item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
-Returning images that are visually similar to an image that you specify.
+Returning the images that are visually similar to an image that you specify.
 }
 \examples{
 \dontrun{

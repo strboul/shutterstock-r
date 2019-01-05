@@ -15,7 +15,8 @@ getImageCollections(id, ...)
 \item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
-Get the details of image collections
+Giving more detailed information about a collection such as its cover image,
+creation and most recent update time.
 }
 \examples{
 \dontrun{

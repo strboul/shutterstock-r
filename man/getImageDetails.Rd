@@ -15,7 +15,7 @@ getImageDetails(id, ...)
 \item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
-Showing information about an image, including a URL to a preview image and
+Showing information about an image, including its URL and preview image and
 the sizes that it is available in.
 }
 \examples{

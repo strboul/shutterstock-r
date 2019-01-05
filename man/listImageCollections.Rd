@@ -13,7 +13,7 @@ listImageCollections(...)
 \item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
-List image collections
+Listing your collections of images and their basic attributes.
 }
 \examples{
 \dontrun{

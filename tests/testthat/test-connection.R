@@ -43,5 +43,38 @@ test_that("sstk oauth scope validation", {
     c("collections.edit", "collections.view")
   )
 
+  # return all scopes:
+  expect_equal(
+    sstk_oauth_scope("all"),
+    c(
+      "collections.edit",
+      "collections.view",
+      "earnings.view",
+      "licenses.create",
+      "licenses.view",
+      "media.edit",
+      "media.submit",
+      "media.upload",
+      "organization.address",
+      "organization.view",
+      "purchases.view",
+      "reseller.purchase",
+      "reseller.view",
+      "user.address",
+      "user.edit",
+      "user.email",
+      "user.view"
+    )
+  )
+
   expect_error(sstk_oauth_scope(c("collections.edit", "XYZ-NONEXISTS")))
+})
+
+test_that("sstk oauth endpoint", {
+  endpoints <- sstk_oauth_endpoint()
+  expect_equal(endpoints[["authorize"]],
+               "https://api.shutterstock.com/v2/oauth/authorize")
+  expect_equal(endpoints[["access"]],
+               "https://api.shutterstock.com/v2/oauth/access_token")
+  expect_is(endpoints, "oauth_endpoint")
 })

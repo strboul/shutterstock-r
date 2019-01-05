@@ -7,11 +7,14 @@
 \dQuote{\code{/images/categories}}
 }
 \usage{
-listImageCategories()
+listImageCategories(...)
+}
+\arguments{
+\item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
 Listing the categories (Shutterstock-assigned genres) that images can belong
-to. \emph{This call takes no additional parameters.}
+to.
 }
 \examples{
 \dontrun{

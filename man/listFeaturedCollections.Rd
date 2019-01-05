@@ -13,7 +13,7 @@ listFeaturedCollections(...)
 \item{...}{arguments to be passed by the source endpoint parameters.}
 }
 \description{
-List featured collections
+Listing featured collections based on their types.
 }
 \examples{
 \dontrun{

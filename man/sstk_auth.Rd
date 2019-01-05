@@ -2,29 +2,43 @@
 % Please edit documentation in R/connection.R
 \name{sstk_auth}
 \alias{sstk_auth}
-\title{Authorize Shutterstock}
+\title{Authorize Shutterstock library}
 \usage{
 sstk_auth(scopes = NULL)
 }
 \arguments{
-\item{scopes}{A list of scopes defined in the Shutterstock API.
-Default value is set to \code{NULL} which Shutterstock grants the
-\code{user.view} scope by default when no additional scopes have been
-provided.}
+\item{scopes}{character. The default value is \code{NULL}. See details below
+for more information.}
 }
 \description{
 Authenticate and store user credentials to authorize requests for the
-Shutterstock API. After a successful authentication, an OAuth token will be
-cached inside the \code{.httr-oauth}, which is a file placed in the current
-working directory. This workflow is mainly followed by the \code{httr}
-package.
+Shutterstock API.
 }
 \details{
-See the OAuth scope list
+This call starts the OAuth 2.0 authentication process. After successful
+authentication, an OAuth token will be cached inside the \code{.httr-oauth},
+which is a file placed in the current working directory. Shutterstock library
+searches for a token saved in \code{.httr-oauth} file in different R
+sessions. If the token is not found in the directory, the call launches OAuth
+2.0 authentication flow. This workflow is mainly followed by the \code{httr}
+package.
+
+The argument \strong{\code{scopes}} accept a list of OAuth scopes defined in
+the Shutterstock API. The default value is set to \code{NULL} but that
+includes the \dQuote{\code{user.view}} scope which the Shutterstock API
+grants by default when no additional scopes have been provided. Use
+\dQuote{\code{all}} keyword to demand all scopes to be included in the OAuth
+token.
+
+See the full Shutterstock API OAuth scope list here:
 \url{https://api-reference.shutterstock.com/#authentication-oauth-scopes-h2}
 }
 \examples{
 \dontrun{
+# apply collections.view and licenses.view scopes:
 sstk_auth(scopes = c("collections.view", "licenses.view"))
+
+# apply all available scopes:
+sstk_auth(scopes = "all")
 }
 }

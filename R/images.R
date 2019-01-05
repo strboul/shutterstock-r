@@ -28,23 +28,26 @@ searchImages <- function(...) {
 #' List image categories
 #'
 #' Listing the categories (Shutterstock-assigned genres) that images can belong
-#' to. \emph{This call takes no additional parameters.}
+#' to.
 #'
+#' @param ... arguments to be passed by the source endpoint parameters.
 #' @source \dQuote{\code{/images/categories}}
 #' @examples \dontrun{
 #' listImageCategories()
 #' }
 #' @export
-listImageCategories <- function() {
+listImageCategories <- function(...) {
+  params <- list(...)
   send_request(
     method = "GET",
-    resource = "images/categories"
+    resource = "images/categories",
+    parameters = params
   )
 }
 
 #' List similar images
 #'
-#' Returning images that are visually similar to an image that you specify.
+#' Returning the images that are visually similar to an image that you specify.
 #'
 #' @param id character. Image ID. (required)
 #' @param ... arguments to be passed by the source endpoint parameters.
@@ -92,7 +95,7 @@ listRecommendedImages <- function(id, ...) {
 
 #' Get details about images
 #'
-#' Showing information about an image, including a URL to a preview image and
+#' Showing information about an image, including its URL and preview image and
 #' the sizes that it is available in.
 #'
 #' @param id character. Image ID. (required)
@@ -137,17 +140,17 @@ listImages <- function(id, ...) {
 ### LICENSES AND DOWNLOADS ----
 ### ----------------------------------------------------------------- ###
 
-#' List licenses
+#' List image licenses
 #'
-#' Listing existing licenses.
+#' Listing your existing licenses.
 #'
 #' @param ... arguments to be passed by the source endpoint parameters.
-#' @source \dQuote{\code{/images/licenses/}}
+#' @source \dQuote{\code{/images/licenses}}
 #' @examples \dontrun{
-#' listLicenses(image_id = "620154782")
+#' listImageLicenses(image_id = "620154782")
 #' }
 #' @export
-listLicenses <- function(...) {
+listImageLicenses <- function(...) {
   params <- list(...)
   send_request(
     method = "GET",
@@ -161,6 +164,8 @@ listLicenses <- function(...) {
 ### ----------------------------------------------------------------- ###
 
 #' List image collections
+#'
+#' Listing your collections of images and their basic attributes.
 #'
 #' @param ... arguments to be passed by the source endpoint parameters.
 #' @source \dQuote{\code{/images/collections/}}
@@ -178,6 +183,9 @@ listImageCollections <- function(...) {
 }
 
 #' Get the details of image collections
+#'
+#' Giving more detailed information about a collection such as its cover image,
+#' creation and most recent update time.
 #'
 #' @param id character. Collection ID. (required)
 #' @param ... arguments to be passed by the source endpoint parameters.
@@ -197,17 +205,18 @@ getImageCollections <- function(id, ...) {
   )
 }
 
-#' Get the contents of image collections
+#' Get the details of image collections
+#'
+#' Listing the image IDs and date when added to a collection.
 #'
 #' @param id character. Collection ID. (required)
 #' @param ... arguments to be passed by the source endpoint parameters.
 #' @source \dQuote{\code{/images/collections/\{id\}/items}}
 #' @examples \dontrun{
-#' # enter an id from the collections you own:
-#' getImageCollectionsContent(id = "139149928")
+#' getImageCollectionsDetails(id = "139149928")
 #' }
 #' @export
-getImageCollectionsContent <- function(id, ...) {
+getImageCollectionsDetails <- function(id, ...) {
   check_required_args(id, "character")
   params <- list(...)
   send_request(
@@ -217,7 +226,13 @@ getImageCollectionsContent <- function(id, ...) {
   )
 }
 
+### ----------------------------------------------------------------- ###
+### FEATURED COLLECTIONS ----
+### ----------------------------------------------------------------- ###
+
 #' List featured collections
+#'
+#' Listing featured collections based on their types.
 #'
 #' @param ... arguments to be passed by the source endpoint parameters.
 #' @source \dQuote{\code{/images/collections/featured/}}
@@ -231,6 +246,49 @@ listFeaturedCollections <- function(...) {
   send_request(
     method = "GET",
     resource = "images/collections/featured",
+    parameters = params
+  )
+}
+
+#' Get the details of featured collections
+#'
+#' Giving more detailed information about a featured collection such as its
+#' cover image, creation and most recent update time.
+#'
+#' @param id character. Collection ID. (required)
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/collections/featured/\{id\}}}
+#' @examples \dontrun{
+#' getFeaturedCollections(id = "136351027")
+#' }
+#' @export
+getFeaturedCollections <- function(id, ...) {
+  check_required_args(id, "character")
+  params <- list(...)
+  send_request(
+    method = "GET",
+    resource = sprintf("images/collections/featured/%s", id),
+    parameters = params
+  )
+}
+
+#' Get the contents of featured collections
+#'
+#' Listing the image IDs and date when added to a featured collection.
+#'
+#' @param id character. Collection ID. (required)
+#' @param ... arguments to be passed by the source endpoint parameters.
+#' @source \dQuote{\code{/images/collections/featured/\{id\}/items}}
+#' @examples \dontrun{
+#' getFeaturedCollectionsItems(id = "136351027")
+#' }
+#' @export
+getFeaturedCollectionsItems <- function(id, ...) {
+  check_required_args(id, "character")
+  params <- list(...)
+  send_request(
+    method = "GET",
+    resource = sprintf("images/collections/featured/%s/items", id),
     parameters = params
   )
 }
