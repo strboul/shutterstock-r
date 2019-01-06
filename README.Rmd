@@ -9,7 +9,7 @@ library("shutterstock")
 knitr::opts_chunk$set(
   eval = FALSE,
   collapse = TRUE,
-  comment = "#>",
+  comment = "##",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
@@ -40,6 +40,7 @@ devtools::install_github("strboul/shutterstock")
 Search the most popular images about *Amsterdam*:
 
 ```{r, eval = TRUE}
+library("shutterstock")
 amsterdam <- searchImages(query = "Amsterdam", sort = "popular")
 d <- amsterdam[["data"]]
 do.call(rbind, lapply(d, function(x) {
@@ -78,11 +79,20 @@ top <- head(top.tbl, 15L)
 
 ggplot(top, aes(x = kws, y = Freq)) +
   geom_bar(stat = "identity", width = 0.7, color = "black", fill = "white") +
-  labs(title = "The most popular family keywords", x = "Keyword", y = "Frequency") +
+  labs(title = "The most popular family keywords", x = "Keyword") +
+  ylab(NULL) +
   theme_bw()
 ```
-
-<img src="man/figures/README-plot.png" width="100%" />
+```{r plot, eval = TRUE, echo = FALSE, out.width = "75%", out.height = "75%"}
+# serialized data for demonstration:
+library("ggplot2")
+top <- readRDS("inst/extdata/sysdata.rda")
+ggplot(top, aes(x = kws, y = Freq)) +
+  geom_bar(stat = "identity", width = 0.7, color = "black", fill = "white") +
+  labs(title = "The most popular family keywords", x = "Keyword") +
+  ylab(NULL) +
+  theme_bw()
+```
 
 ## OAuth 2.0 Authentication
 

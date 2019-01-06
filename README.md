@@ -35,6 +35,7 @@ devtools::install_github("strboul/shutterstock")
 Search the most popular images about *Amsterdam*:
 
 ``` r
+library("shutterstock")
 amsterdam <- searchImages(query = "Amsterdam", sort = "popular")
 d <- amsterdam[["data"]]
 do.call(rbind, lapply(d, function(x) {
@@ -46,20 +47,20 @@ do.call(rbind, lapply(d, function(x) {
   )
 })) -> popular
 head(popular)
-#>           id                             description
-#> 1  656151523 Amsterdam Netherlands dancing house ...
-#> 2  534783616 Amsterdam canal Singel with typical ...
-#> 3 1012458397 Amsterdam Netherlands, city skyline ...
-#> 4  797232592 Bike over canal Amsterdam city. Pic ...
-#> 5  642423370 Amsterdam Netherlands dancing house ...
-#> 6  189863267 Beautiful sunrise over Amsterdam, T ...
-#>                                                                                                                                                                                              preview
-#> 1        https://image.shutterstock.com/display_pic_with_logo/147241/656151523/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-656151523.jpg
-#> 2   https://image.shutterstock.com/display_pic_with_logo/697543/534783616/stock-photo-amsterdam-canal-singel-with-typical-dutch-houses-and-houseboats-during-morning-blue-hour-holland-534783616.jpg
-#> 3                 https://image.shutterstock.com/display_pic_with_logo/1005848/1012458397/stock-photo-amsterdam-netherlands-city-skyline-at-canal-waterfront-with-spring-tulip-flower-1012458397.jpg
-#> 4 https://image.shutterstock.com/display_pic_with_logo/147241/797232592/stock-photo-bike-over-canal-amsterdam-city-picturesque-town-landscape-in-netherlands-with-view-on-river-amstel-797232592.jpg
-#> 5        https://image.shutterstock.com/display_pic_with_logo/147241/642423370/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-642423370.jpg
-#> 6 https://image.shutterstock.com/display_pic_with_logo/941065/189863267/stock-photo-beautiful-sunrise-over-amsterdam-the-netherlands-with-flowers-and-bicycles-on-the-bridge-in-spring-189863267.jpg
+##           id                             description
+## 1  656151523 Amsterdam Netherlands dancing house ...
+## 2  534783616 Amsterdam canal Singel with typical ...
+## 3 1012458397 Amsterdam Netherlands, city skyline ...
+## 4  797232592 Bike over canal Amsterdam city. Pic ...
+## 5  642423370 Amsterdam Netherlands dancing house ...
+## 6  189863267 Beautiful sunrise over Amsterdam, T ...
+##                                                                                                                                                                                              preview
+## 1        https://image.shutterstock.com/display_pic_with_logo/147241/656151523/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-656151523.jpg
+## 2   https://image.shutterstock.com/display_pic_with_logo/697543/534783616/stock-photo-amsterdam-canal-singel-with-typical-dutch-houses-and-houseboats-during-morning-blue-hour-holland-534783616.jpg
+## 3                 https://image.shutterstock.com/display_pic_with_logo/1005848/1012458397/stock-photo-amsterdam-netherlands-city-skyline-at-canal-waterfront-with-spring-tulip-flower-1012458397.jpg
+## 4 https://image.shutterstock.com/display_pic_with_logo/147241/797232592/stock-photo-bike-over-canal-amsterdam-city-picturesque-town-landscape-in-netherlands-with-view-on-river-amstel-797232592.jpg
+## 5        https://image.shutterstock.com/display_pic_with_logo/147241/642423370/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-642423370.jpg
+## 6 https://image.shutterstock.com/display_pic_with_logo/941065/189863267/stock-photo-beautiful-sunrise-over-amsterdam-the-netherlands-with-flowers-and-bicycles-on-the-bridge-in-spring-189863267.jpg
 ```
 
 Build a frequency plot from keywords of the images searched with a
@@ -88,11 +89,12 @@ top <- head(top.tbl, 15L)
 
 ggplot(top, aes(x = kws, y = Freq)) +
   geom_bar(stat = "identity", width = 0.7, color = "black", fill = "white") +
-  labs(title = "The most popular family keywords", x = "Keyword", y = "Frequency") +
+  labs(title = "The most popular family keywords", x = "Keyword") +
+  ylab(NULL) +
   theme_bw()
 ```
 
-<img src="man/figures/README-plot.png" width="100%" />
+<img src="man/figures/README-plot-1.png" width="75%" height="75%" />
 
 ## OAuth 2.0 Authentication
 
