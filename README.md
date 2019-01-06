@@ -111,6 +111,8 @@ PRs are welcomed\!
 
 Only `GET` methods are supported in the current version.
 
+See `?shutterstock` package documentation for more information.
+
 Please note that the ‘shutterstock’ project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
 this project, you agree to abide by its terms.

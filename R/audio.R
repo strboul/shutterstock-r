@@ -60,6 +60,7 @@ getAudioDetails <- function(id, ...) {
 #' @param ... arguments to be passed by the source endpoint parameters.
 #' @source \dQuote{\code{/audio/licenses}}
 #' @examples \dontrun{
+#' listAudioLicenses()
 #' listAudioLicenses(audio_id = 442583)
 #' }
 #' @export

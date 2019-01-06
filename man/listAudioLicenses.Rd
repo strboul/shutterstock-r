@@ -17,6 +17,7 @@ List audio licenses
 }
 \examples{
 \dontrun{
+listAudioLicenses()
 listAudioLicenses(audio_id = 442583)
 }
 }
