@@ -46,9 +46,9 @@ library("shutterstock")
 sstk_auth()
 ```
 
-After the authentication process has been successfully completed, a token file named `.httr-oauth` will be written to your working directory. Do not share this token with others. 
+After the authentication process has been successfully completed, a token file named `.httr-oauth` will be written to your working directory. Don't share or publish your token(s) and preserve them as you do for your username and password. Whoever gains access to the `.httr-oauth` file would have the power to access the API. If you are using a version control system like git, be sure the `.httr-oauth` is excluded in the `.gitignore`.
 
-Since some API endpoints require an access token for different scopes or permissions, scopes can be added to the call such as `sstk_auth(scopes = c("collections.view", "licenses.view"))`. You can see which scopes do you need by looking an individual endpoint reference. If you want to change the scope of your token, delete the existing `.httr-oauth` file, re-authenticate again with `sstk_auth` by providing required scopes.
+Since some API endpoints require an access token for different scopes or permissions, scopes can be added to the call such as `sstk_auth(scopes = c("collections.view", "licenses.view"))`. You can see which scopes do you need by looking an individual endpoint reference. If you want to change the scope of your token, delete the existing `.httr-oauth` file, re-authenticate again with `sstk_auth()` by providing required scopes.
 
 For general OAuth problems, please read the 
 [Shutterstock OAuth 2.0 guide](https://api-reference.shutterstock.com/#authentication-oauth-authentication-h2) thoroughly.

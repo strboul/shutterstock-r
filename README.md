@@ -5,10 +5,12 @@
 
 [![Travis build
 status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r)
-[![Coverage
-status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 [![CRAN status
 badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/shutterstock)](https://www.r-pkg.org/pkg/shutterstock)
+[![Coverage
+status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 
 R library for Shutterstock REST API. Please refer to the official
 reference [here](https://api-reference.shutterstock.com/).
@@ -30,24 +32,67 @@ devtools::install_github("strboul/shutterstock")
 
 ## Usage
 
-Search the most popular images about *Amsterdam* added today:
+Search the most popular images about *Amsterdam*:
 
 ``` r
-today <- as.character(Sys.Date())
-farmer_data <- searchImages(query = "Amsterdam", sort = "popular", added_date = today)
-
-# move focus to the 'data' node:
-d <- farmer_data[["data"]]
-do.call(rbind, lapply(seq_along(d), function(x) {
+amsterdam <- searchImages(query = "Amsterdam", sort = "popular")
+d <- amsterdam[["data"]]
+do.call(rbind, lapply(d, function(x) {
   data.frame(
-    id = d[[x]][["id"]],
-    description = paste(d[[x]][["description"]], "..."), # truncate description a little bit
-    preview = d[[x]][["assets"]][["preview"]][["url"]],
+    id = x[["id"]],
+    description = paste(strtrim(x[["description"]], 35L), "..."), # truncate description field
+    preview = x[["assets"]][["preview"]][["url"]],
     stringsAsFactors = FALSE
   )
-})) -> top
-head(top)
+})) -> popular
+head(popular)
+#>           id                             description
+#> 1  656151523 Amsterdam Netherlands dancing house ...
+#> 2  534783616 Amsterdam canal Singel with typical ...
+#> 3 1012458397 Amsterdam Netherlands, city skyline ...
+#> 4  797232592 Bike over canal Amsterdam city. Pic ...
+#> 5  642423370 Amsterdam Netherlands dancing house ...
+#> 6  189863267 Beautiful sunrise over Amsterdam, T ...
+#>                                                                                                                                                                                              preview
+#> 1        https://image.shutterstock.com/display_pic_with_logo/147241/656151523/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-656151523.jpg
+#> 2   https://image.shutterstock.com/display_pic_with_logo/697543/534783616/stock-photo-amsterdam-canal-singel-with-typical-dutch-houses-and-houseboats-during-morning-blue-hour-holland-534783616.jpg
+#> 3                 https://image.shutterstock.com/display_pic_with_logo/1005848/1012458397/stock-photo-amsterdam-netherlands-city-skyline-at-canal-waterfront-with-spring-tulip-flower-1012458397.jpg
+#> 4 https://image.shutterstock.com/display_pic_with_logo/147241/797232592/stock-photo-bike-over-canal-amsterdam-city-picturesque-town-landscape-in-netherlands-with-view-on-river-amstel-797232592.jpg
+#> 5        https://image.shutterstock.com/display_pic_with_logo/147241/642423370/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-642423370.jpg
+#> 6 https://image.shutterstock.com/display_pic_with_logo/941065/189863267/stock-photo-beautiful-sunrise-over-amsterdam-the-netherlands-with-flowers-and-bicycles-on-the-bridge-in-spring-189863267.jpg
 ```
+
+Build a frequency plot from keywords of the images searched with a
+*family* query:
+
+``` r
+library("ggplot2")
+
+images <- searchImages(query = "family", per_page = 225)
+# extract image ids:
+image.ids <- sapply(seq_along(images[["data"]]), function(i) {
+  images[["data"]][[i]][["id"]]
+})
+
+data <- lapply(image.ids, function(x) {
+  cat(sprintf("[%s] get image: \"%s\"", match(x, image.ids), x), sep = "\n")
+  Sys.sleep(4) # try to prevent HTTP 429 error
+  details <- getImageDetails(id = x)
+  as.character(details[["keywords"]])
+})
+
+kws <- do.call(c, data)
+tbl.counts <- as.data.frame(table(kws))
+top.tbl <- tbl.counts[order(tbl.counts["Freq"], decreasing = TRUE), ]
+top <- head(top.tbl, 15L)
+
+ggplot(top, aes(x = kws, y = Freq)) +
+  geom_bar(stat = "identity", width = 0.7, color = "black", fill = "white") +
+  labs(title = "The most popular family keywords", x = "Keyword", y = "Frequency") +
+  theme_bw()
+```
+
+<img src="man/figures/README-plot.png" width="100%" />
 
 ## OAuth 2.0 Authentication
 
