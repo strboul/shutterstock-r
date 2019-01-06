@@ -1,0 +1,114 @@
+{
+    "data": [
+        {
+            "name": "Baby Elephants",
+            "cover_item": {
+                "id": "168592952",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:50:21-04:00",
+            "id": "1991678",
+            "total_item_count": 3,
+            "created_time": "2014-05-01T05:49:41-04:00"
+        },
+        {
+            "name": "Zebra",
+            "cover_item": {
+                "id": "79395886",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:43:54-04:00",
+            "id": "1991642",
+            "total_item_count": 8,
+            "created_time": "2014-05-01T05:40:45-04:00"
+        },
+        {
+            "name": "Birds",
+            "cover_item": {
+                "id": "125620139",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:41:42-04:00",
+            "id": "1991634",
+            "total_item_count": 12,
+            "created_time": "2014-05-01T05:39:22-04:00"
+        },
+        {
+            "name": "Rhino",
+            "cover_item": {
+                "id": "78995494",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:38:08-04:00",
+            "id": "1991622",
+            "total_item_count": 5,
+            "created_time": "2014-05-01T05:37:06-04:00"
+        },
+        {
+            "name": "Hyena",
+            "cover_item": {
+                "id": "81173365",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:38:52-04:00",
+            "id": "1991616",
+            "total_item_count": 7,
+            "created_time": "2014-05-01T05:34:58-04:00"
+        },
+        {
+            "name": "Giraffe",
+            "cover_item": {
+                "id": "100575334",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:36:16-04:00",
+            "id": "1991602",
+            "total_item_count": 10,
+            "created_time": "2014-05-01T05:29:57-04:00"
+        },
+        {
+            "name": "Monochrome",
+            "cover_item": {
+                "id": "152770688",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:29:33-04:00",
+            "id": "1991582",
+            "total_item_count": 3,
+            "created_time": "2014-05-01T05:28:25-04:00"
+        },
+        {
+            "name": "Leopard cubs",
+            "cover_item": {
+                "id": "79620871",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:41:28-04:00",
+            "id": "1991572",
+            "total_item_count": 7,
+            "created_time": "2014-05-01T05:26:51-04:00"
+        },
+        {
+            "name": "African Landscapes",
+            "cover_item": {
+                "id": "79489261",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:38:34-04:00",
+            "id": "1991564",
+            "total_item_count": 5,
+            "created_time": "2014-05-01T05:23:20-04:00"
+        },
+        {
+            "name": "Lion Cubs",
+            "cover_item": {
+                "id": "87672997",
+                "media_type": "image"
+            },
+            "updated_time": "2014-05-01T05:22:07-04:00",
+            "id": "135931",
+            "total_item_count": 10,
+            "created_time": "2012-04-07T02:07:28-04:00"
+        }
+    ]
+}

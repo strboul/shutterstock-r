@@ -1,0 +1,110 @@
+{
+    "media_type": "video",
+    "id": "18002566",
+    "description": "Tortoise walking on white isolated background",
+    "aspect": 1.778,
+    "duration": 17,
+    "categories": [
+        {
+            "name": "Animals/Wildlife",
+            "id": "1"
+        }
+    ],
+    "keywords": [
+        "animal",
+        "beautiful",
+        "closeup",
+        "color",
+        "fauna",
+        "funny",
+        "giant",
+        "islands",
+        "leopard",
+        "natural",
+        "nature",
+        "pattern",
+        "reptile",
+        "reserve",
+        "sand",
+        "shell",
+        "slowly",
+        "texture",
+        "tortoise",
+        "turtle",
+        "walking",
+        "white",
+        "wild",
+        "wildlife",
+        "yellow"
+    ],
+    "contributor": {
+        "id": "4178674"
+    },
+    "is_adult": false,
+    "has_model_release": false,
+    "aspect_ratio": "16:9",
+    "added_date": "2016-07-14",
+    "assets": {
+        "thumb_webm": {
+            "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/stock-footage-tortoise-walking-on-white-isolated-background.webm"
+        },
+        "thumb_mp4": {
+            "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/stock-footage-tortoise-walking-on-white-isolated-background.mp4"
+        },
+        "preview_webm": {
+            "url": "https://ak6.picdn.net/shutterstock/videos/18002566/preview/stock-footage-tortoise-walking-on-white-isolated-background.webm"
+        },
+        "preview_mp4": {
+            "url": "https://ak6.picdn.net/shutterstock/videos/18002566/preview/stock-footage-tortoise-walking-on-white-isolated-background.mp4"
+        },
+        "thumb_jpgs": {
+            "urls": [
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/1.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/2.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/3.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/4.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/5.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/6.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/7.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/8.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/9.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/10.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/11.jpg",
+                "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/12.jpg"
+            ]
+        },
+        "thumb_jpg": {
+            "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/1.jpg"
+        },
+        "preview_jpg": {
+            "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/1.jpg"
+        },
+        "sd": {
+            "height": 480,
+            "width": 852,
+            "fps": 59.94,
+            "format": "mov",
+            "file_size": 11564032,
+            "display_name": "Standard Definition MPEG",
+            "is_licensable": true
+        },
+        "web": {
+            "height": 240,
+            "width": 426,
+            "fps": 59.94,
+            "format": "mov",
+            "file_size": 3755008,
+            "display_name": "Low Resolution MPEG",
+            "is_licensable": true
+        },
+        "hd": {
+            "height": 1080,
+            "width": 1920,
+            "fps": 59.94,
+            "format": "avc1",
+            "file_size": 23991296,
+            "display_name": "Original HD",
+            "is_licensable": true
+        }
+    }
+}

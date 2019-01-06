@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "Animals/Wildlife"
+        },
+        {
+            "id": "2",
+            "name": "Buildings/Landmarks"
+        },
+        {
+            "id": "3",
+            "name": "Backgrounds/Textures"
+        },
+        {
+            "id": "4",
+            "name": "Business/Finance"
+        },
+        {
+            "id": "5",
+            "name": "Education"
+        },
+        {
+            "id": "6",
+            "name": "Food and Drink"
+        },
+        {
+            "id": "7",
+            "name": "Health Care"
+        },
+        {
+            "id": "8",
+            "name": "Holidays"
+        },
+        {
+            "id": "9",
+            "name": "Objects"
+        },
+        {
+            "id": "10",
+            "name": "Industrial"
+        },
+        {
+            "id": "11",
+            "name": "Art"
+        },
+        {
+            "id": "12",
+            "name": "Nature"
+        },
+        {
+            "id": "13",
+            "name": "People"
+        },
+        {
+            "id": "14",
+            "name": "Religion"
+        },
+        {
+            "id": "15",
+            "name": "Science"
+        },
+        {
+            "id": "16",
+            "name": "Technology"
+        },
+        {
+            "id": "17",
+            "name": "Signs/Symbols"
+        },
+        {
+            "id": "18",
+            "name": "Sports/Recreation"
+        },
+        {
+            "id": "19",
+            "name": "Transportation"
+        },
+        {
+            "id": "21",
+            "name": "Editorial"
+        }
+    ]
+}

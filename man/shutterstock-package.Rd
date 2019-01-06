@@ -16,6 +16,9 @@ documentation.
 
 \item Insert unit tests by using \code{testthat} package
 
+\item Copy \code{.httr-oauth} file into \code{tests/testthat} directory (but
+remove that later)
+
 \item Add/uncomment \code{httptest::start_capturing()} and
 \code{httptest::stop_capturing()} recording lines between the tests
 

@@ -1,0 +1,68 @@
+{
+    "data": [
+        {
+            "media_type": "video",
+            "id": "17139196",
+            "description": "Cherry tree summer good weather\n",
+            "aspect": 1.778,
+            "duration": 21,
+            "contributor": {
+                "id": "4178674"
+            },
+            "has_model_release": false,
+            "aspect_ratio": "16:9",
+            "assets": {
+                "thumb_webm": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/17139196/thumb/stock-footage-cherry-tree-summer-good-weather.webm"
+                },
+                "thumb_mp4": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/17139196/thumb/stock-footage-cherry-tree-summer-good-weather.mp4"
+                },
+                "preview_webm": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/17139196/preview/stock-footage-cherry-tree-summer-good-weather.webm"
+                },
+                "preview_mp4": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/17139196/preview/stock-footage-cherry-tree-summer-good-weather.mp4"
+                },
+                "thumb_jpg": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/17139196/thumb/1.jpg"
+                },
+                "preview_jpg": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/17139196/thumb/1.jpg"
+                }
+            }
+        },
+        {
+            "media_type": "video",
+            "id": "18002566",
+            "description": "Tortoise walking on white isolated background",
+            "aspect": 1.778,
+            "duration": 17,
+            "contributor": {
+                "id": "4178674"
+            },
+            "has_model_release": false,
+            "aspect_ratio": "16:9",
+            "assets": {
+                "thumb_webm": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/stock-footage-tortoise-walking-on-white-isolated-background.webm"
+                },
+                "thumb_mp4": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/stock-footage-tortoise-walking-on-white-isolated-background.mp4"
+                },
+                "preview_webm": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/18002566/preview/stock-footage-tortoise-walking-on-white-isolated-background.webm"
+                },
+                "preview_mp4": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/18002566/preview/stock-footage-tortoise-walking-on-white-isolated-background.mp4"
+                },
+                "thumb_jpg": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/1.jpg"
+                },
+                "preview_jpg": {
+                    "url": "https://ak6.picdn.net/shutterstock/videos/18002566/thumb/1.jpg"
+                }
+            }
+        }
+    ]
+}

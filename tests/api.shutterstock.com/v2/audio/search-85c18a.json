@@ -1,0 +1,484 @@
+{
+    "page": 1,
+    "per_page": 20,
+    "total_count": 17,
+    "search_id": "ca6d3bf7-a84d-4eb1-8f89-5c329385d3f1",
+    "data": [
+        {
+            "id": "394985",
+            "description": "Earthy and free, feel the soft needles of the fir trees along the nature walk with this dulcimer-driven acoustic jam.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 25374764
+                },
+                "preview_mp3": {
+                    "file_size": 3173895,
+                    "url": "https://ak.picdn.net/shutterstock/audio/394985/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 2542850,
+                    "url": "https://ak.picdn.net/shutterstock/audio/394985/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 16221,
+                    "url": "https://ak.picdn.net/shutterstock/audio/394985/waveform/waveform.png"
+                }
+            },
+            "title": "Dulcimer Dream",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2015-09-17T11:49:29-04:00",
+            "added_date": "2015-09-17"
+        },
+        {
+            "id": "395441",
+            "description": "Radiant and energetic, a whistled melody animates this cheerful banjo and ukulele romp.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 30219654
+                },
+                "preview_mp3": {
+                    "file_size": 3771998,
+                    "url": "https://ak.picdn.net/shutterstock/audio/395441/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3695401,
+                    "url": "https://ak.picdn.net/shutterstock/audio/395441/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 17255,
+                    "url": "https://ak.picdn.net/shutterstock/audio/395441/waveform/waveform.png"
+                }
+            },
+            "title": "Whistling Workers",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2015-09-17T12:00:12-04:00",
+            "added_date": "2015-09-17"
+        },
+        {
+            "id": "396221",
+            "description": "Simple and unique, ukulele and slide guitar intertwine to provide a soundtrack for a campfire or a night on the beach.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 26234924
+                },
+                "preview_mp3": {
+                    "file_size": 3281107,
+                    "url": "https://ak.picdn.net/shutterstock/audio/396221/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 2809096,
+                    "url": "https://ak.picdn.net/shutterstock/audio/396221/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 18773,
+                    "url": "https://ak.picdn.net/shutterstock/audio/396221/waveform/waveform.png"
+                }
+            },
+            "title": "Ukulele Happiness",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2015-09-17T12:13:21-04:00",
+            "added_date": "2015-09-17"
+        },
+        {
+            "id": "396338",
+            "description": "Cozy and down-home, strummed mandolin, plucked banjo and a jug-band bassline create an atmosphere of backwoods charm.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 29928976
+                },
+                "preview_mp3": {
+                    "file_size": 3743161,
+                    "url": "https://ak.picdn.net/shutterstock/audio/396338/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 4449059,
+                    "url": "https://ak.picdn.net/shutterstock/audio/396338/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 16929,
+                    "url": "https://ak.picdn.net/shutterstock/audio/396338/waveform/waveform.png"
+                }
+            },
+            "title": "Crawfish",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2015-09-17T20:37:11-04:00",
+            "added_date": "2015-09-17"
+        },
+        {
+            "id": "397007",
+            "description": "Cozy and natural, soft percussion, plucked dobro and banjo create an atmosphere of comfort.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 40384532
+                },
+                "preview_mp3": {
+                    "file_size": 3366994,
+                    "url": "https://ak.picdn.net/shutterstock/audio/397007/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3583357,
+                    "url": "https://ak.picdn.net/shutterstock/audio/397007/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 18415,
+                    "url": "https://ak.picdn.net/shutterstock/audio/397007/waveform/waveform.png"
+                }
+            },
+            "title": "Easy Hayride",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2015-09-22T19:28:38-04:00",
+            "added_date": "2015-09-22"
+        },
+        {
+            "id": "397460",
+            "description": "Natural and warm, featuring a variety of down-home bluegrass instruments like banjo, dobro and mandolin that create an atmosphere of American comfort.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 42297488
+                },
+                "preview_mp3": {
+                    "file_size": 3526855,
+                    "url": "https://ak.picdn.net/shutterstock/audio/397460/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3738475,
+                    "url": "https://ak.picdn.net/shutterstock/audio/397460/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 18052,
+                    "url": "https://ak.picdn.net/shutterstock/audio/397460/waveform/waveform.png"
+                }
+            },
+            "title": "Hayseeds",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2015-09-29T12:08:36-04:00",
+            "added_date": "2015-09-29"
+        },
+        {
+            "id": "427376",
+            "description": "Flowing and earnest, featuring fingerpicked acoustic guitar, bright banjo and a memorable melody that create an atmosphere of comfort.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 40834420
+                },
+                "preview_mp3": {
+                    "file_size": 5106126,
+                    "url": "https://ak.picdn.net/shutterstock/audio/427376/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 5476500,
+                    "url": "https://ak.picdn.net/shutterstock/audio/427376/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 19751,
+                    "url": "https://ak.picdn.net/shutterstock/audio/427376/waveform/waveform.png"
+                }
+            },
+            "title": "Get Your Ticket",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2016-01-12T16:32:55-05:00",
+            "added_date": "2016-01-12"
+        },
+        {
+            "id": "428663",
+            "description": "Warm and heartfelt, featuring driving fiddle, smooth viola, gentle piano and light drums that create a feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 32521478
+                },
+                "preview_mp3": {
+                    "file_size": 4000224,
+                    "url": "https://ak.picdn.net/shutterstock/audio/428663/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3912897,
+                    "url": "https://ak.picdn.net/shutterstock/audio/428663/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 18196,
+                    "url": "https://ak.picdn.net/shutterstock/audio/428663/waveform/waveform.png"
+                }
+            },
+            "title": "Happenstance Day Parade",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2016-01-18T16:45:09-05:00",
+            "added_date": "2016-01-18"
+        },
+        {
+            "id": "431051",
+            "description": "Bouncy and happy, featuring strummed ukulele, brightly flowing fiddle and gentle percussion that create a feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 28831626
+                },
+                "preview_mp3": {
+                    "file_size": 3639728,
+                    "url": "https://ak.picdn.net/shutterstock/audio/431051/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 4140465,
+                    "url": "https://ak.picdn.net/shutterstock/audio/431051/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 20517,
+                    "url": "https://ak.picdn.net/shutterstock/audio/431051/waveform/waveform.png"
+                }
+            },
+            "title": "Can't Stop My Smile",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2016-02-09T16:43:51-05:00",
+            "added_date": "2016-02-09"
+        },
+        {
+            "id": "438242",
+            "description": "Upbeat and earthy, featuring acoustic guitar and a Bluegrass feel that creates a bold mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 29184118
+                },
+                "preview_mp3": {
+                    "file_size": 3649536,
+                    "url": "https://ak.picdn.net/shutterstock/audio/438242/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3280323,
+                    "url": "https://ak.picdn.net/shutterstock/audio/438242/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 12755,
+                    "url": "https://ak.picdn.net/shutterstock/audio/438242/waveform/waveform.png"
+                }
+            },
+            "title": "Speakeasy",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2016-06-13T13:34:34-04:00",
+            "added_date": "2016-06-13"
+        },
+        {
+            "id": "484424",
+            "description": "Warm and uplifting, featuring twangy banjo, acoustic guitar, and light drums that create an earthy, feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 28637094
+                },
+                "preview_mp3": {
+                    "file_size": 3580992,
+                    "url": "https://ak.picdn.net/shutterstock/audio/484424/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3581900,
+                    "url": "https://ak.picdn.net/shutterstock/audio/484424/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 13354,
+                    "url": "https://ak.picdn.net/shutterstock/audio/484424/waveform/waveform.png"
+                }
+            },
+            "title": "My Grass Is Blue",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2017-04-14T10:41:23-04:00",
+            "added_date": "2017-04-14"
+        },
+        {
+            "id": "503458",
+            "description": "Warm and twangy, featuring banjo, mandolin, acoustic guitar, fiddles, and upright bass creating a proud, feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 25443808
+                },
+                "preview_mp3": {
+                    "file_size": 3181824,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503458/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 2939710,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503458/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 13781,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503458/waveform/waveform.png"
+                }
+            },
+            "title": "John Henry Bluegrass",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2018-04-25T17:40:18-04:00",
+            "added_date": "2018-04-25"
+        },
+        {
+            "id": "503608",
+            "description": "Warm and breezy, featuring fiddle, mandolin, and banjo creating a proud, reflective mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 28272116
+                },
+                "preview_mp3": {
+                    "file_size": 3535488,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503608/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3371474,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503608/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 14685,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503608/waveform/waveform.png"
+                }
+            },
+            "title": "Angel Band",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2018-04-30T13:25:41-04:00",
+            "added_date": "2018-04-30"
+        },
+        {
+            "id": "503806",
+            "description": "Warm and earthy, featuring banjo, mandolin, acoustic guitar and fiddle creating a proud, feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 28080116
+                },
+                "preview_mp3": {
+                    "file_size": 3511296,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503806/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3323258,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503806/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 14131,
+                    "url": "https://ak.picdn.net/shutterstock/audio/503806/waveform/waveform.png"
+                }
+            },
+            "title": "Wildwood Flower",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2018-04-30T13:57:28-04:00",
+            "added_date": "2018-04-30"
+        },
+        {
+            "id": "504862",
+            "description": "Bold and breezy, featuring flowing acoustic guitar, mandolin, banjo, double bass and drums that create a proud, reflective mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 30467482
+                },
+                "preview_mp3": {
+                    "file_size": 3809664,
+                    "url": "https://ak.picdn.net/shutterstock/audio/504862/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3516562,
+                    "url": "https://ak.picdn.net/shutterstock/audio/504862/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 12842,
+                    "url": "https://ak.picdn.net/shutterstock/audio/504862/waveform/waveform.png"
+                }
+            },
+            "title": "Appalachian Sun",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2018-05-21T11:10:47-04:00",
+            "added_date": "2018-05-21"
+        },
+        {
+            "id": "505174",
+            "description": "Warm and earthy, featuring breezy acoustic guitar, dobro guitar, double bass, and drums that create a proud, feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 30775926
+                },
+                "preview_mp3": {
+                    "file_size": 3848256,
+                    "url": "https://ak.picdn.net/shutterstock/audio/505174/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3873456,
+                    "url": "https://ak.picdn.net/shutterstock/audio/505174/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 14179,
+                    "url": "https://ak.picdn.net/shutterstock/audio/505174/waveform/waveform.png"
+                }
+            },
+            "title": "On the Top of the Hill",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2018-05-29T17:08:32-04:00",
+            "added_date": "2018-05-29"
+        },
+        {
+            "id": "510869",
+            "description": "Twangy and uplifting, featuring warm acoustic and dobro guitars, mandolin, banjo, upright bass, and drums creating an earthy, feel-good mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 29376114
+                },
+                "preview_mp3": {
+                    "file_size": 3673152,
+                    "url": "https://ak.picdn.net/shutterstock/audio/510869/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 3425908,
+                    "url": "https://ak.picdn.net/shutterstock/audio/510869/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 14110,
+                    "url": "https://ak.picdn.net/shutterstock/audio/510869/waveform/waveform.png"
+                }
+            },
+            "title": "Last Train to Pine Ridge",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2018-09-21T09:40:17-04:00",
+            "added_date": "2018-09-21"
+        }
+    ]
+}

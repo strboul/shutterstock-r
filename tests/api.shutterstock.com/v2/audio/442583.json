@@ -1,0 +1,83 @@
+{
+    "vocal_description": "",
+    "keywords": [
+        "celebratory",
+        "chic",
+        "euphoric",
+        "good times",
+        "hip",
+        "optimistic",
+        "party",
+        "soaring",
+        "upbeat"
+    ],
+    "artists": [
+        {
+            "name": "Klimenko Music"
+        }
+    ],
+    "genres": [
+        "Dance/Electronic",
+        "Electro Pop",
+        "Pop/Rock"
+    ],
+    "instruments": [
+        "Piano",
+        "Synth bass",
+        "Synth drums",
+        "Synthesizer"
+    ],
+    "id": "442583",
+    "isrc": "",
+    "description": "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
+    "similar_artists": [
+
+    ],
+    "releases": [
+
+    ],
+    "is_instrumental": true,
+    "title": "Another Tomorrow",
+    "is_adult": false,
+    "lyrics": "",
+    "media_type": "audio",
+    "recording_version": "pro-free",
+    "moods": [
+        "Bright",
+        "Confident",
+        "Fun",
+        "Happy",
+        "Inspiring",
+        "Optimistic",
+        "Playful",
+        "Sophisticated",
+        "Stylish",
+        "Uplifting"
+    ],
+    "language": "en",
+    "assets": {
+        "clean_audio": {
+            "file_size": 35188408
+        },
+        "preview_mp3": {
+            "file_size": 4400203,
+            "url": "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
+        },
+        "preview_ogg": {
+            "file_size": 4453197,
+            "url": "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
+        },
+        "waveform": {
+            "file_size": 18778,
+            "url": "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
+        }
+    },
+    "contributor": {
+        "id": "2847971"
+    },
+    "duration": 183,
+    "published_time": "2016-08-16T14:30:03-04:00",
+    "updated_time": "2017-01-17T18:24:26-05:00",
+    "bpm": 110,
+    "added_date": "2016-08-16"
+}

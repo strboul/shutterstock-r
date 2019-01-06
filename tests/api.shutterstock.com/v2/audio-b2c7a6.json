@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "id": "434750",
+            "description": "Pulsing and feel-good, featuring slick electric guitar, synthesizer, bass, electronic drum pads and drums that create a positive, celebratory mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 30760372
+                },
+                "preview_mp3": {
+                    "file_size": 3846606,
+                    "url": "https://ak.picdn.net/shutterstock/audio/434750/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 4402608,
+                    "url": "https://ak.picdn.net/shutterstock/audio/434750/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 19822,
+                    "url": "https://ak.picdn.net/shutterstock/audio/434750/waveform/waveform.png"
+                }
+            },
+            "title": "Fresh Love",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2016-04-12T17:45:29-04:00",
+            "added_date": "2016-04-12"
+        },
+        {
+            "id": "442583",
+            "description": "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
+            "assets": {
+                "clean_audio": {
+                    "file_size": 35188408
+                },
+                "preview_mp3": {
+                    "file_size": 4400203,
+                    "url": "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
+                },
+                "preview_ogg": {
+                    "file_size": 4453197,
+                    "url": "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
+                },
+                "waveform": {
+                    "file_size": 18778,
+                    "url": "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
+                }
+            },
+            "title": "Another Tomorrow",
+            "media_type": "audio",
+            "contributor": {
+                "id": "2847971"
+            },
+            "published_time": "2016-08-16T14:30:03-04:00",
+            "added_date": "2016-08-16"
+        }
+    ]
+}

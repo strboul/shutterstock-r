@@ -1,16 +1,15 @@
 context("test-connection")
 
+### httptest tests ------------------------------------------------
+
+# httptest::start_capturing()
+
 with_mock_api({
   test_that("check http type", {
     response <- httr::GET("https://api.shutterstock.com/v2/test")
     expect_silent(check_http_type(response, type = "application/json"))
     expect_error(check_http_type(response, type = "text/html"))
   })
-})
-
-test_that("can get a response", {
-  # expect an internal error for non implemented methods e.g. PATCH
-  expect_error(get_response("PATCH", "test"))
 })
 
 with_mock_api({
@@ -28,6 +27,15 @@ with_mock_api({
     expect_error(stop_error_status(response_404))
 
   })
+})
+
+# httptest::stop_capturing()
+
+### httptest tests ------------------------------------------------
+
+test_that("can get a response", {
+  # expect an internal error for non implemented methods e.g. PATCH
+  expect_error(get_response("PATCH", "test"))
 })
 
 test_that("sstk oauth scope validation", {
