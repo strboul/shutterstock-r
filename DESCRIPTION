@@ -1,5 +1,5 @@
 Package: shutterstock
-Version: 0.0.1
+Version: 0.1.0
 Title: R Library for Shutterstock REST API
 Description: Access Shutterstock API from R. The Shutterstock API presents 
     access to search, view, license and download the media and information 
