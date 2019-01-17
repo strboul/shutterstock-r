@@ -150,7 +150,7 @@ is_response <- function(x) {
 
 #' User-Agent request header
 #'
-#' Sending only the Shutterstock R library version and the VCS repository URL.
+#' Sending only the Shutterstock R package version and the VCS repository URL.
 #'
 #' @importFrom httr user_agent
 #' @importFrom utils packageVersion
@@ -166,7 +166,7 @@ user_agent_header <- function() {
 ### AUTHENTICATION ----
 ### ----------------------------------------------------------------- ###
 
-#' Authorize Shutterstock library
+#' Authorize Shutterstock R package
 #'
 #' Authenticate and store user credentials to authorize requests for the
 #' Shutterstock API.
@@ -178,7 +178,7 @@ user_agent_header <- function() {
 #'
 #' This call starts the OAuth 2.0 authentication process. After successful
 #' authentication, an OAuth token will be cached inside the \code{.httr-oauth},
-#' which is a file placed in the current working directory. Shutterstock library
+#' which is a file placed in the current working directory. Shutterstock package
 #' searches for a token saved in \code{.httr-oauth} file in different R
 #' sessions. If the token is not found in the directory, the call launches OAuth
 #' 2.0 authentication flow. This workflow is mainly followed by the \code{httr}

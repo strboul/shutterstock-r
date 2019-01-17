@@ -2,7 +2,7 @@
 % Please edit documentation in R/connection.R
 \name{sstk_auth}
 \alias{sstk_auth}
-\title{Authorize Shutterstock library}
+\title{Authorize Shutterstock R package}
 \usage{
 sstk_auth(scopes = NULL)
 }
@@ -17,7 +17,7 @@ Shutterstock API.
 \details{
 This call starts the OAuth 2.0 authentication process. After successful
 authentication, an OAuth token will be cached inside the \code{.httr-oauth},
-which is a file placed in the current working directory. Shutterstock library
+which is a file placed in the current working directory. Shutterstock package
 searches for a token saved in \code{.httr-oauth} file in different R
 sessions. If the token is not found in the directory, the call launches OAuth
 2.0 authentication flow. This workflow is mainly followed by the \code{httr}

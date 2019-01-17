@@ -1,4 +1,5 @@
-Changed LICENSE with the CRAN template for the MIT license.
+Renamed library with package, where it is relevant. Put the 'Shutterstock' in 
+quotes. Added original API url to the Description field in the DESCRIPTION file.
 
 ## Test environments
 * local OS X install, R 3.5.2

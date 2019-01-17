@@ -12,7 +12,7 @@ downloads](https://cranlogs.r-pkg.org/badges/shutterstock)](https://www.r-pkg.or
 [![Coverage
 status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 
-R library for Shutterstock REST API. Please refer to the official
+R package for Shutterstock REST API. Please refer to the official
 reference [here](https://api-reference.shutterstock.com/).
 
 ## Installation
@@ -53,14 +53,14 @@ head(popular)
 ## 3 1012458397 Amsterdam Netherlands, city skyline ...
 ## 4  797232592 Bike over canal Amsterdam city. Pic ...
 ## 5  642423370 Amsterdam Netherlands dancing house ...
-## 6  189863267 Beautiful sunrise over Amsterdam, T ...
+## 6 1028628301 Channel in Amsterdam Netherlands ho ...
 ##                                                                                                                                                                                              preview
 ## 1        https://image.shutterstock.com/display_pic_with_logo/147241/656151523/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-656151523.jpg
 ## 2   https://image.shutterstock.com/display_pic_with_logo/697543/534783616/stock-photo-amsterdam-canal-singel-with-typical-dutch-houses-and-houseboats-during-morning-blue-hour-holland-534783616.jpg
 ## 3                 https://image.shutterstock.com/display_pic_with_logo/1005848/1012458397/stock-photo-amsterdam-netherlands-city-skyline-at-canal-waterfront-with-spring-tulip-flower-1012458397.jpg
 ## 4 https://image.shutterstock.com/display_pic_with_logo/147241/797232592/stock-photo-bike-over-canal-amsterdam-city-picturesque-town-landscape-in-netherlands-with-view-on-river-amstel-797232592.jpg
 ## 5        https://image.shutterstock.com/display_pic_with_logo/147241/642423370/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-642423370.jpg
-## 6 https://image.shutterstock.com/display_pic_with_logo/941065/189863267/stock-photo-beautiful-sunrise-over-amsterdam-the-netherlands-with-flowers-and-bicycles-on-the-bridge-in-spring-189863267.jpg
+## 6 https://image.shutterstock.com/display_pic_with_logo/147241/1028628301/stock-photo-channel-in-amsterdam-netherlands-houses-river-amstel-landmark-old-european-city-spring-landscape-1028628301.jpg
 ```
 
 Build a frequency plot from keywords of the images searched with a

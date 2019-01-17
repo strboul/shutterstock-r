@@ -41,7 +41,7 @@ lines
 
 \itemize{
 
-\item To make the API client library loose coupled, the name of the
+\item To make the package dev structure loose coupled, the name of the
 parameters passed to a call are not hard-coded in the code. The parameters
 are handled by the HTTP requests which receive the parameters from function
 calls by the ellipsis (\code{...}).

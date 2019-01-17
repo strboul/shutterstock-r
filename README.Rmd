@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 [![Travis build status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r) [![CRAN status badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock) [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/shutterstock)](https://www.r-pkg.org/pkg/shutterstock) [![Coverage status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 
-R library for Shutterstock REST API. Please refer to the official reference
+R package for Shutterstock REST API. Please refer to the official reference
 [here](https://api-reference.shutterstock.com/).
 
 ## Installation
