@@ -1,5 +1,4 @@
-Renamed library with package, where it is relevant. Put the 'Shutterstock' in 
-quotes. Added original API url to the Description field in the DESCRIPTION file.
+Change title in the DESCRIPTION file by removing 'R package to' part.
 
 ## Test environments
 * local OS X install, R 3.5.2
