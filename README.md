@@ -17,13 +17,14 @@ reference [here](https://api-reference.shutterstock.com/).
 
 ## Installation
 
-<!--You can install the released version of shutterstock from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the released version of shutterstock from
+[CRAN](https://cran.r-project.org/web/packages/shutterstock/) with:
+
 ``` r
 install.packages("shutterstock")
-```-->
+```
 
-You can install development version:
+You can install the development version:
 
 ``` r
 # install.packages("devtools")
@@ -49,15 +50,15 @@ do.call(rbind, lapply(d, function(x) {
 head(popular)
 ##           id                             description
 ## 1  656151523 Amsterdam Netherlands dancing house ...
-## 2  534783616 Amsterdam canal Singel with typical ...
-## 3 1012458397 Amsterdam Netherlands, city skyline ...
+## 2 1012458397 Amsterdam Netherlands, city skyline ...
+## 3  534783616 Amsterdam canal Singel with typical ...
 ## 4  797232592 Bike over canal Amsterdam city. Pic ...
 ## 5  642423370 Amsterdam Netherlands dancing house ...
 ## 6 1028628301 Channel in Amsterdam Netherlands ho ...
 ##                                                                                                                                                                                              preview
 ## 1        https://image.shutterstock.com/display_pic_with_logo/147241/656151523/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-656151523.jpg
-## 2   https://image.shutterstock.com/display_pic_with_logo/697543/534783616/stock-photo-amsterdam-canal-singel-with-typical-dutch-houses-and-houseboats-during-morning-blue-hour-holland-534783616.jpg
-## 3                 https://image.shutterstock.com/display_pic_with_logo/1005848/1012458397/stock-photo-amsterdam-netherlands-city-skyline-at-canal-waterfront-with-spring-tulip-flower-1012458397.jpg
+## 2                 https://image.shutterstock.com/display_pic_with_logo/1005848/1012458397/stock-photo-amsterdam-netherlands-city-skyline-at-canal-waterfront-with-spring-tulip-flower-1012458397.jpg
+## 3   https://image.shutterstock.com/display_pic_with_logo/697543/534783616/stock-photo-amsterdam-canal-singel-with-typical-dutch-houses-and-houseboats-during-morning-blue-hour-holland-534783616.jpg
 ## 4 https://image.shutterstock.com/display_pic_with_logo/147241/797232592/stock-photo-bike-over-canal-amsterdam-city-picturesque-town-landscape-in-netherlands-with-view-on-river-amstel-797232592.jpg
 ## 5        https://image.shutterstock.com/display_pic_with_logo/147241/642423370/stock-photo-amsterdam-netherlands-dancing-houses-over-river-amstel-landmark-in-old-european-city-spring-642423370.jpg
 ## 6 https://image.shutterstock.com/display_pic_with_logo/147241/1028628301/stock-photo-channel-in-amsterdam-netherlands-houses-river-amstel-landmark-old-european-city-spring-landscape-1028628301.jpg
@@ -99,9 +100,10 @@ ggplot(top, aes(x = kws, y = Freq)) +
 ## OAuth 2.0 Authentication
 
 OAuth 2.0 authentication is better to use for the queries as its scope
-is greater than the capabilities of the basic authentication. Read the
-vignette for more information. For general OAuth problems, please read
-the [Shutterstock OAuth 2.0
+is greater than the capabilities of the basic authentication. Read [this
+vignette](https://cran.r-project.org/web/packages/shutterstock/vignettes/oauth-authentication.html)
+for more information. For general OAuth problems, please read the
+[Shutterstock OAuth 2.0
 guide](https://api-reference.shutterstock.com/#authentication-oauth-authentication-h2)
 thoroughly.
 

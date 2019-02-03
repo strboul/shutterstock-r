@@ -23,13 +23,13 @@ R package for Shutterstock REST API. Please refer to the official reference
 
 ## Installation
 
-<!--You can install the released version of shutterstock from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the released version of shutterstock from
+[CRAN](https://cran.r-project.org/web/packages/shutterstock/) with:
 ``` r
 install.packages("shutterstock")
-```-->
+```
 
-You can install development version:
+You can install the development version:
 ```r
 # install.packages("devtools")
 devtools::install_github("strboul/shutterstock")
@@ -103,7 +103,7 @@ ggplot(top, aes(x = kws, y = Freq)) +
 ## OAuth 2.0 Authentication
 
 OAuth 2.0 authentication is better to use for the queries as its scope is
-greater than the capabilities of the basic authentication. Read the vignette for
+greater than the capabilities of the basic authentication. Read [this vignette](https://cran.r-project.org/web/packages/shutterstock/vignettes/oauth-authentication.html) for
 more information. For general OAuth problems, please read the [Shutterstock OAuth 2.0 guide](https://api-reference.shutterstock.com/#authentication-oauth-authentication-h2) thoroughly.
 
 ## Development
