@@ -7,8 +7,6 @@
 status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r)
 [![CRAN status
 badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock)
-[![CRAN RStudio mirror
-downloads](https://cranlogs.r-pkg.org/badges/shutterstock)](https://www.r-pkg.org/pkg/shutterstock)
 [![Coverage
 status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 
@@ -18,7 +16,7 @@ reference [here](https://api-reference.shutterstock.com/).
 ## Installation
 
 You can install the released version of shutterstock from
-[CRAN](https://cran.r-project.org/web/packages/shutterstock/) with:
+[CRAN](https://cran.r-project.org/package=shutterstock) with:
 
 ``` r
 install.packages("shutterstock")

@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-OAuth 2.0 authentication is better to use for the queries as its scope is greater than the
+In order to access Shutterstock API, OAuth 2.0 authentication is better to use for the queries as its scope is greater than the
 capabilities of the basic authentication.
 
 After registering into the developer's app, you will receive a client id and secret. During the registration, the app requires the callback URL and hostname to be explicitly defined. For instance, if you set your Callback URL as `http://localhost:3000` then the hostname should be set as `localhost`.
