@@ -16,14 +16,17 @@ knitr::opts_chunk$set(
 ```
 # shutterstock
 
-[![Travis build status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r) [![CRAN status badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock) [![Coverage status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
+[![Travis build status](https://travis-ci.org/strboul/shutterstock-r.svg?branch=master)](https://travis-ci.org/strboul/shutterstock-r)
+[![CRAN status badge](https://www.r-pkg.org/badges/version/shutterstock)](https://cran.r-project.org/package=shutterstock)
+[![CRAN mirror downloads](https://cranlogs.r-pkg.org/badges/shutterstock)](https://www.r-pkg.org/pkg/shutterstock)
+[![Coverage status](https://codecov.io/gh/strboul/shutterstock-r/branch/master/graph/badge.svg)](https://codecov.io/github/strboul/shutterstock-r?branch=master)
 
 R package for Shutterstock REST API. Please refer to the official reference
 [here](https://api-reference.shutterstock.com/).
 
 ## Installation
 
-You can install the released version of shutterstock from
+You can install the released version of *shutterstock* package from
 [CRAN](https://cran.r-project.org/package=shutterstock) with:
 ``` r
 install.packages("shutterstock")
@@ -102,8 +105,8 @@ ggplot(top, aes(x = kws, y = Freq)) +
 
 ## OAuth 2.0 Authentication
 
-OAuth 2.0 authentication is better to use for the queries as its scope is
-greater than the capabilities of the basic authentication. Read [this vignette](https://cran.r-project.org/web/packages/shutterstock/vignettes/oauth-authentication.html) for
+OAuth 2.0 authentication is better to use for the queries because its scope is
+greater than the capabilities of the basic authentication. Read the [**vignette**](https://cran.r-project.org/web/packages/shutterstock/vignettes/oauth-authentication.html) for
 more information. For general OAuth problems, please read the [Shutterstock OAuth 2.0 guide](https://api-reference.shutterstock.com/#authentication-oauth-authentication-h2) thoroughly.
 
 ## Development
@@ -114,4 +117,5 @@ Only `GET` methods are supported in the current version.
 
 See `?shutterstock` package documentation for more information.
 
-Please note that the 'shutterstock' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+Please note that the *shutterstock* project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
